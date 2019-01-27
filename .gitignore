@@ -1,12 +1,6 @@
 *.xml
-*.iml
-*/.xml
-*/.iml
-*\.xml
-*\.iml
-*.idea/*
-*\.idea/*
-*/.idea/*
+.idea/misc.xml
+.idea/mysite.iml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -16,7 +10,7 @@ __pycache__/
 *$py.class
 # C extensions
 *.so
-
+*.idea/
 # Distribution / packaging
 .Python
 build/
