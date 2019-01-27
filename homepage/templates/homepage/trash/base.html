@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'homepage/Pics/logo.png' %}" type="image/gif" sizes="16x16">
+        <title>MyStore</title>
+
+    <link rel="stylesheet" href="{% static 'homepage/CSS/Style4index.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/CSS/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/CSS/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/CSS/jquery-ui.css' %}">
+
+</head>
+
+<body>
+        <header>
+            {% include 'homepage/navbar.html' %}
+        </header>
+
+
+
+        {% block body %}
+
+        {% endblock %}
+
+
+{% include 'homepage/footer.html' %}
+{% if not user.is_authenticated %}
+    {% include 'homepage/sign-in-up-popup.html' %}
+{% endif %}
+{% include 'homepage/category.html' %}
+
+        <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'homepage/JS/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homepage/JS/jquery.js' %}"></script>
+    <script src="{% static 'homepage/JS/jquery-ui.js' %}"></script>
+    <script src="{% static 'homepage/JS/fontawesome.min.js' %}"></script>
+
+    {% if not user.is_authenticated %}
+        <!-- Sign-In Pop up Script -->
+        <script>
+            document.getElementById('BUTTON').addEventListener('click',function(){
+                document.querySelector('.BG_MODAL').style.display='flex';
+                });
+            $(document).ready(function(){
+                $("#SIGNUP").click(function(){
+                    $("#SIGNINPAGE").toggle();
+                    $("#SIGNUPPAGE").toggle();
+                });
+            });
+            $(document).ready(function(){
+                $("#SIGNUP2").click(function(){
+                    $("#SIGNINPAGE").toggle();
+                    $("#SIGNUPPAGE").toggle();
+            });
+            });
+
+            document.querySelector('.CLOSE').addEventListener('click',function(){
+                document.querySelector('.BG_MODAL').style.display='none';
+            });
+        </script>
+	{% endif %}
+        <script>
+            //Category Script
+            document.getElementById('Category_PAGEButton').addEventListener('click',function(){
+                document.querySelector('.Category_PAGE').style.display='flex';
+            });
+            document.querySelector('.CLOSECategory_PAGE').addEventListener('click',function(){
+                document.querySelector('.Category_PAGE').style.display='none';
+            });
+
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </body>
+  </html>

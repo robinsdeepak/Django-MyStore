@@ -1,0 +1,130 @@
+.Address4Mystore{
+    min-height: 200px;
+    background-color: white;
+    margin: 2%;
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    width: 90%;
+    margin-top: 2%;
+}
+.savedAddress{
+    min-height: 100px;
+    border: 1px solid black;
+    width: 35%;
+    margin: 2%;
+}
+.text4UpdateUAddress{
+ text-align: left;
+ margin-left: 2%;
+ font-size: 20px;
+}
+.input4UpdateUAddress{
+    text-align: left;
+    margin-left: 2%;
+    width: 90%;
+}
+.SavedByMap{
+    min-height: 100px;
+    border: 1px solid black;
+    width: 25%;
+    position: relative;
+    left: 30%;
+    margin: 2%;
+}
+.Payment4Mystore{
+    min-height: 300px;
+    background-color: white;
+    margin: 2%;
+    border-bottom: 1px solid lightgrey;
+    width: 50%;
+}
+.InternalHead{
+    border-bottom:1px solid lightgrey;
+    min-height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+}
+.savedCard{
+    
+    min-height: 50px;
+    font-size: 20px;
+    width: 100%;
+    padding-left: 2%;
+}
+.priceTag{
+    min-height: 300px;
+    background-color: white;
+    margin: 2%;
+    border-bottom: 1px solid lightgrey;
+    width: 38%;
+}
+.priceTag4Mobile{
+    min-height: 300px;
+    background-color: white;
+    margin: 2%;
+    border-bottom: 1px solid lightgrey;
+    width: 90%;
+    display: none;
+}
+.priceToTag{
+    color: grey;
+    float: right;
+    margin-right: 5%;
+}
+hr {
+    border: 1px solid lightgrey;
+  }
+.ExtraRadioBack{
+    background-color:lightgray;
+    min-height:100px;
+   }
+   .ExtraRadioBack2{
+    background-color:lightgray;
+    min-height:100px;
+   }
+   .ExtraRadioBack3{
+    background-color:lightgray;
+    min-height:100px;
+   }
+   .ExtraRadioBack7{
+    background-color:lightgray;
+    min-height:100px;
+   }
+   .ExtraRadioBack8{
+    background-color:lightgray;
+    min-height:100px;
+   }
+   .ExtraRadioBack9{
+    background-color:lightgray;
+    min-height:100px;
+   }
+   @media only screen and (max-width: 720px) {
+    .Address4Mystore{
+        display: block;
+        margin-left: 5%;
+    }
+    .savedAddress{
+        min-width: 90%;
+        margin-left: 5%;
+
+    }
+    .SavedByMap{
+        left: 0;
+        min-width: 90%;
+        margin-left: 5%;
+    }
+    .Payment4Mystore{
+        min-width: 90%;
+        margin-left: 5%;
+    }
+    .priceTag{
+        display: none;
+    }
+    .priceTag4Mobile{
+        display: block;
+        background-color: white;
+        margin-left: 5%;
+    }
+
+   }

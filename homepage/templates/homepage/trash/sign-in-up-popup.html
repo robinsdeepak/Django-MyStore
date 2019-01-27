@@ -1,0 +1,33 @@
+        	      <!--Pop up page  -->
+	      <div class="BG_MODAL">
+			<div class="MODAL_CONTENT">
+			  <div class="CLOSE">+</div>
+			  <form id="SIGNINPAGE" action="{% url 'login' %}" method="post">
+                  {% csrf_token %}
+                  <fieldset>
+				    <input type="text" id="lphone" name="phone" placeholder="Mobile no">
+				    <input type="password" id="lpass" name="password" placeholder="Password">
+                    <input type="hidden" name="current_url" value="{{ request.get_full_path }}">
+
+                  </fieldset>
+
+                    <button type="submit" class="button">Login</button>
+                    <a href="#">Forgot Password?</a><br><br>
+
+				<button  type="button" id="SIGNUP" class="btn">New to Web? Sign up</button>
+			  </form>
+			  <form id="SIGNUPPAGE" action="{% url 'register' %}" method="post">
+                  {% csrf_token %}
+				<input type="text" id="sphone" name="phone" placeholder="Mobile no">
+                  <input type="text" id="semail" name="email" placeholder="email">
+				<input type="password" id="spass" name="password" placeholder="Password">
+				<input type="password" id="scpass" placeholder="ReEnter Password">
+				<a href="#" class="button">Sign Up</a>
+                  <button type="button" id="SIGNUP2" class="btn btn-outline-light">
+                      Existing User? Log in</button>
+                  &nbsp;
+                <button type="submit" class="button">Sign Up</button>
+				<br>
+			  </form>
+			</div>
+		  </div>

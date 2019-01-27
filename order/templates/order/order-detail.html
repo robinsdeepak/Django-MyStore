@@ -1,0 +1,124 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block title %}Order Description{% endblock %}
+
+{% block body %}
+    <div class="container order-checkout">
+        <div class="row payment_address">
+            <div class="col-md-6 col-sm-12 address">
+                <div>
+                    <div class="address-details">
+                        <span class="recipient-name"><strong>Deepak Kumar</strong></span><br>
+                        <span class="address-line-1">Sai Mandir Patliputra</span><br>
+                        <span class="address-line-2">Patliputra Colony</span><br>
+                        <span class="city">Patna</span><br>
+                        <span class="pin-code">800013</span>
+                        <span class="State">Bihar</span>
+                    </div>
+{#                    <div class="address-details">#}
+{#                        <span class="recipient-name"><strong>Deepak Kumar</strong></span><br>#}
+{#                        <span class="address-line-1">Sai Mandir Patliputra</span><br>#}
+{#                        <span class="address-line-2">Patliputra Colony</span><br>#}
+{#                        <span class="city">Patna</span><br>#}
+{#                        <span class="pin-code">800013</span>#}
+{#                        <span class="State">Bihar</span>#}
+{#                    </div>#}
+                </div>
+                <div class="payment">
+                    <span>Rs.204.00 Paid Successfully using Card xxx1234</span>
+                </div>
+
+            </div>
+
+            <div class="order-status">
+                <span><strong>Delevered on:</strong> 13 Jan 2019</span><br><br>
+                <small><strong>Reached the destination:</strong> 2:00 PM, 13 Jan 2019</small><br>
+                <small><strong>Order Proccessed and sent:</strong> 01:30 PM, 13 Jan 2019</small><br>
+                <small><strong>Order Placed:</strong> 12:30 AM, 13 Jan 2019</small><br>
+
+            </div>
+        </div>
+    <div class="row order_summary" style="background-color: #c8c8c8;">
+{#                    <div class="row" style="padding-top: 5px; background-color: #fff;">#}
+                <div class="col-sm-5" style="text-align: center;">
+                    <span><strong>Sold By</strong></span><br>
+                    <span><a href="#" style="text-decoration: None;">Shop name</a></span>
+                </div>
+                <div class="col-sm-5" style="text-align: center;">
+                    <span><strong>Total amount: </strong></span><br>
+                    <span style="color: #003eff;">Rs.204.00</span>
+                </div>
+    </div>
+{% for product in products %}
+        <div class="row product">
+                <div class="row a-box-shipment">
+                        <div class="col-sm-2" style="padding-top: 10px;">
+                            <a href="{% url 'product:productView' product.pk %}" style="text-decoration: None;">
+                            <img src="{{ product.image_link.url }}" alt="image" style=" height: 80px;"></a>
+                        </div>
+                        <div class="col-sm-6" style="padding-top: 10px;">
+                                <span style="color: #1b1e21;">
+                                    <strong>
+                                        <a href="{% url 'product:productView' product.pk %}" style="text-decoration: None;">{{ product.name }}</a></strong>
+                                </span><br>
+                                <span>Qty: 10{{ product_quantity }}</span>
+                        </div>
+                        <div class="col-sm-4" style="text-align: center; padding-top: 10px;">
+                            <span><strong>Price:</strong> Rs. {{ product.price }}x{{ product_quantity }}</span>
+                        </div>
+                </div>
+        </div>
+    {% endfor %}
+
+    </div>
+
+
+    <style>
+        .order-checkout{
+
+        }
+        .payment_address{
+            background-color: #fff;
+            border: solid #c8c8c8 1px;
+            border-radius: 10px;
+        }
+        .address{
+
+        }
+        .address-details{
+            margin: 5px;
+            padding: 5px;
+            width: 30%;
+            background-color: #fff;
+            border: solid #c8c8c8 0.5px;
+            border-radius: 5px;
+            {#float: left;#}
+            display: inline-block;
+        }
+        .order-status{
+            margin: 5px;
+            padding: 5px;
+            width: 30%;
+            border: solid #c8c8c8 1px ;
+        }
+        .payment{
+            margin: 5px;
+            padding: 5px;
+            width: 200px;
+            height: 100px;
+            background-color: #fff;
+            border: solid #c8c8c8 0.5px;
+            border-radius: 5px;
+        }
+        .a-box-shipment{
+            margin: 5px;
+            padding: 5px;
+            width: 100%;
+            background-color: #fff;
+            height: 120px;
+            border-radius: 5px;
+        }
+    </style>
+
+{% endblock %}

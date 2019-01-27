@@ -1,0 +1,13 @@
+{% extends 'homepage/base.html' %}
+{% block body %}
+{% for key, value in context.items %}
+    <strong>{{ key }}</strong>:&nbsp;&nbsp;{{ value }}<br>
+{% endfor %}
+<br><br>
+
+<strong>Products</strong><br>
+
+{% for product in products %}
+    {{ product.shop_product.name }}<br>
+{% endfor %}
+{% endblock %}

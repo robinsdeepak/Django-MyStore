@@ -1,0 +1,350 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="container-fluid" style="border-top: 1px solid black">
+        <div class="SlidSHow">
+            <div class="NewProduct ">
+                <b>Trending</b><br>
+                {% for product in trending_products %}
+                <div class="NewTemplate mySlides">
+                    {% include 'homepage/product-block.html' %}
+                </div>
+                {% endfor %}
+            </div>
+            <a class="prev" onclick="myFunction.plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="myFunction.plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="SlidSHow4">
+            <div class="ShopList">
+                <b>shop near u</b><br>
+              {% for shop in nearby_shops %}
+                  {% include 'homepage/shop-block.html' %}
+              {% endfor %}
+            </div>
+            <a class="prev4" onclick="myFunction4.plusSlides4(-1)">&#10094;</a>
+            <a class="next4" onclick="myFunction4.plusSlides4(1)">&#10095;</a>
+        </div>
+
+        <div class="SlidSHow2">
+            <div class="NewProduct">
+                <b >Nearby Products</b><br>
+                {% for product in nearby_products %}
+                    <div class="NewTemplate mySlides2">
+                        {% include 'homepage/product-block.html' %}
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="prev2" onclick="myFunction2.plusSlides2(-1)">&#10094;</a>
+            <a class="next2" onclick="myFunction2.plusSlides2(1)">&#10095;</a>
+        </div>
+
+        <div class="SlidSHow3">
+            <div class="NewProduct ">
+                <b>Previously bought by you</b><br>
+                {% for product in history_product %}
+                    <div class="NewTemplate mySlides3">
+                        {% include 'homepage/product-block.html' %}
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="prev3" onclick="myFunction3.plusSlides3(-1)">&#10094;</a>
+            <a class="next3" onclick="myFunction3.plusSlides3(1)">&#10095;</a>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+       //  script code for first slides
+        function myFunction(y){
+        if (y.matches) {
+        var slideIndex = 1;
+         showSlides(slideIndex);
+         var x;
+         var A;
+
+        function plusSlides(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+4);
+            }
+            else{
+                showSlides(slideIndex -= n+5);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex,slideIndex+1,slideIndex+2,slideIndex+3];
+
+         for (A=0; A<5; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }else{
+            var slideIndex = 1;
+         showSlides(slideIndex);
+         var n;
+
+        function plusSlides(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+1);
+            }
+            else{
+                showSlides(slideIndex -= n+2);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var A;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex];
+
+         for (A=0; A<2; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }
+         myFunction.plusSlides = plusSlides;
+        }
+        var y = window.matchMedia("(min-width: 700px)")
+        myFunction(y)
+         y.addListener(myFunction)
+
+       // end of code for slides one
+
+       //  script code for 2nd slides
+        function myFunction2(a){
+        if (a.matches) {
+        var slideIndex = 1;
+         showSlides(slideIndex);
+         var x;
+         var A;
+
+        function plusSlides2(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+4);
+            }
+            else{
+                showSlides(slideIndex -= n+5);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides2");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex,slideIndex+1,slideIndex+2,slideIndex+3];
+
+         for (A=0; A<5; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }else{
+            var slideIndex = 1;
+         showSlides(slideIndex);
+         var n;
+
+        function plusSlides2(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+1);
+            }
+            else{
+                showSlides(slideIndex -= n+2);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var A;
+          var slides = document.getElementsByClassName("mySlides2");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex];
+
+         for (A=0; A<2; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }
+         myFunction2.plusSlides2 = plusSlides2;
+        }
+        var a = window.matchMedia("(min-width: 700px)")
+        myFunction2(a)
+         a.addListener(myFunction2)
+
+       // end of code for slides 2nd
+
+
+
+          //  script code for third slides
+          function myFunction3(b){
+        if (b.matches) {
+        var slideIndex = 1;
+         showSlides(slideIndex);
+         var x;
+         var A;
+
+        function plusSlides3(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+4);
+            }
+            else{
+                showSlides(slideIndex -= n+5);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides3");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex,slideIndex+1,slideIndex+2,slideIndex+3];
+
+         for (A=0; A<5; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }else{
+            var slideIndex = 1;
+         showSlides(slideIndex);
+         var n;
+
+        function plusSlides3(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+1);
+            }
+            else{
+                showSlides(slideIndex -= n+2);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var A;
+          var slides = document.getElementsByClassName("mySlides3");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex];
+
+         for (A=0; A<2; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }
+         myFunction3.plusSlides3 = plusSlides3;
+        }
+        var b = window.matchMedia("(min-width: 700px)")
+        myFunction3(b)
+         b.addListener(myFunction3)
+
+       // end of code for slides one
+
+
+
+
+
+
+          //  script code for 4th slides
+          function myFunction4(c){
+        if (c.matches) {
+        var slideIndex = 1;
+         showSlides(slideIndex);
+         var x;
+         var A;
+
+        function plusSlides4(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+5);
+            }
+            else{
+                showSlides(slideIndex -= n+6);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides4");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex,slideIndex+1,slideIndex+2,slideIndex+3,slideIndex+4];
+
+         for (A=0; A<6; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }else{
+            var slideIndex = 1;
+         showSlides(slideIndex);
+         var n;
+
+        function plusSlides4(n) {
+            if (n == 1){
+             showSlides(slideIndex += n+3);
+            }
+            else{
+                showSlides(slideIndex -= n+4);
+            }
+           }
+
+        function showSlides(n) {
+          var i;
+          var A;
+          var slides = document.getElementsByClassName("mySlides4");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+         for(i=0;i<slides.length;i++){
+            var NewSlides=[slideIndex-1,slideIndex,slideIndex+1,slideIndex+2];
+
+         for (A=0; A<4; A++)
+            slides[NewSlides[A]].style.display = "inline-block";
+         }
+        }
+        }
+         myFunction4.plusSlides4 = plusSlides4;
+        }
+        var c = window.matchMedia("(min-width: 700px)")
+        myFunction4(c)
+         c.addListener(myFunction4)
+    </script>
+{% endblock %}

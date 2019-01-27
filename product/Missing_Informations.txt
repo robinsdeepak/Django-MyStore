@@ -1,0 +1,9 @@
+===== Global Data =====
+01. Algorithm for rating
+02. Custom_Attributes
+03. Category_listing
+
+# ==== User Side =====
+04. Number of this item in the basket
+05. Shops with availability in locality
+06.

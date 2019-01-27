@@ -1,0 +1,88 @@
+.LEFTSIDE{
+    width: 25%;float: left;
+}
+#boxContainer{
+    display: flex;
+}
+.PersonalDetails{
+    top: 0;
+    height: 100px;
+    width:90%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: white;
+    margin: 5%;
+}
+.Details{
+    top: 0;
+    height: 800px;
+    width:65%;
+    background-color: white;
+    border-radius: 5px;
+    border-color: white;
+    margin-top: 1%;
+    float: left;
+}
+.SECTION1{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+}
+.SECTION1:hover{
+    background-color: #ccc;
+}
+.SECTION2{
+    min-height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    color: rgb(8, 8, 8);
+    text-align: center;
+}
+ul{
+    list-style: none;
+    text-align: left;
+}
+li{
+    height: 35px;
+}
+li:hover{
+    background-color: #ccc;
+}
+.SECTION3{
+    min-height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    
+}
+.SECTION4{
+    min-height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    color: rgb(8, 8, 8);
+    text-align: center;
+}
+@media only screen and (max-width: 720px) {
+    .LEFTSIDE{
+        width: 90%;
+    }
+    .Details{
+        display: none;
+    }
+    
+}
+@media only screen and (min-width: 720px ) and (max-width:1000px) {
+    .LEFTSIDE{
+        width: 40%;
+    }
+    .Details{
+        width: 60%;
+    }
+    
+}

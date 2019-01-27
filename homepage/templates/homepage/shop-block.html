@@ -1,0 +1,6 @@
+{% load static %}
+<div class="Ashop mySlides4">
+    <img class="AshopImage" src="{{ shop.Shop_icon.url }}"><br>
+    <a href="{% url 'Shop:shop-detail' shop.pk %}"><b>{{ shop.title }}</b></a>
+</div>
+

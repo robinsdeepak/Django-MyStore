@@ -1,0 +1,234 @@
+header{
+    padding-top: 0px;
+}
+
+meter::-webkit-meter-optimum-value{ background:blue;}
+.input-group.md-form.form-sm.form-2 input.red-border  {
+    border: 1px solid #ef9a9a;
+
+}
+.mySlides3 {display: none}
+
+/* Slideshow container */
+.SlidSHow3{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev3, .next3{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: red;
+}
+/* Position the "next button" to the right */
+.next3 {
+   right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev3:hover, .next3:hover {
+background-color: white;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev3, .next3,.text {font-size: 11px}
+}
+.mySlides2 {display: none}
+
+/* Slideshow container */
+.SlidSHow2{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev2, .next2{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: red;
+}
+/* Position the "next button" to the right */
+.next2 {
+   right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev2:hover, .next2:hover {
+background-color: white;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev2, .next2,.text {font-size: 11px}
+}
+
+ /* Template of product */
+ .NewProduct{
+	width:100%;
+	min-height:200px;
+	
+	border-bottom:1px solid black;
+	margin-top:10px;
+}
+.NewTemplate{
+  min-height: 200px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 2%;
+  word-wrap: wrap; 
+  word-break: break-all;
+  padding-left:5px;
+}
+.ProductImageNew{
+  max-width: 170px;
+  max-height: 170px;
+  margin-top:5px;
+  margin-left: 5px;
+}
+.BuyNowButtonStyle{
+  width: 40px;height: 40px;
+}
+.AddToCartButtonStyle{
+  float:right;margin-right:4%;font-size: 35px;
+}
+.NewPro{
+	height:165px;
+	border:1px solid black;
+	margin-top:5px;
+	width:28%;
+	margin-left:1%;
+	display:inline-block;
+	margin-bottom:2px;
+}
+
+.TAB{
+	height:auto;
+	min-height:240px;
+	
+}
+.List{
+	display:inline-block;
+	width:19%;
+	margin:0px;
+}
+.HeadFaceOfShop{
+  width:100%;
+  height:200px;
+  margin-bottom: 20px;
+  background-color: yellowgreen;
+
+}
+.CoverImage4HeadFaceOfShop{
+  width: 100%;height: 150px;
+}
+.ProfileImage4HeadFaceOfShop{
+  width: 100px; height: 100px;
+}
+.NavbarCustom4HeadFaceOfShop{
+  height:50px;
+}
+@media only screen and (max-width: 720px) {
+	.NewProduct{
+		height:auto;
+		min-height:200px;
+  }
+  .NewProduct{
+		height:auto;
+    min-height:200px;
+	}
+  .NewTemplate{
+    height: 200px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 5%;
+    word-wrap: wrap; 
+    word-break: break-all;
+    padding-left:5px;
+}
+.ProductImageNew{
+    max-width: 100px;
+    max-height: 100px;
+    margin-top:5px;
+    margin-left: 5px;
+}
+.PriceDetailsInTemplate{
+    font-size: 12px;
+}
+.BuyNowButtonStyle{
+    width: 30px;height: 30px;
+}
+.AddToCartButtonStyle{
+    float:right;margin-right:4%;font-size: 25px;
+}
+
+	.topPro{
+		width:90%
+	}
+	.TopProduct{
+		height:auto;
+		min-height:200px;
+	}
+	.List{
+		width:40%;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

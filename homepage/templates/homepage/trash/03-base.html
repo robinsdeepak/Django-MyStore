@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+    <head>
+            <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="{% static 'homepage/Pics/logo.png' %}" type="image/gif" sizes="16x16">
+                <title>MyStore</title>
+
+        <link rel="stylesheet" href="{% static 'homepage/CSS/Style4index.css' %}">
+		<link rel="stylesheet" href="{% static 'homepage/CSS/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'homepage/CSS/all.min.css' %}">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'homepage/JS/bootstrap.min.js' %}"></script>
+        <script src="{% static 'homepage/JS/jquery.js' %}"></script>
+        <script src="{% static 'homepage/JS/jquery-ui.js' %}"></script>
+		<script src="{% static 'homepage/JS/fontawesome.min.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static 'homepage/CSS/jquery-ui.css' %}">
+
+{#        <style>#}
+{#            body{#}
+{#                height: 100%;#}
+{#                background-image: url("/media/background.png");#}
+{#            }#}
+{#            footer{#}
+{#                //clear: both;#}
+{#                //position: relative;#}
+{#                //height: 340px;#}
+{#                //margin-top: 100%px#}
+{#            }#}
+{#        </style>#}
+	</head>
+	<body>
+	    <header>
+{#           <nav class="navbar top navbar-light" style="background-color: #5e5e5e">#}
+{#            <a class="navbar-brand" href="/" style="color:black;"><h4>MyStore</h4></a>#}
+{#            <div class="input-group md-form form-sm form-2 pl-0 mr-auto" style="width:600px;">#}
+{#              <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search.." aria-label="Search">#}
+{#                  <div class="input-group-append" >#}
+{#                        <span class="input-group-text red lighten-3" id="basic-text1">#}
+{#                            <i class="fa fa-search text-grey" aria-hidden="true" ></i></span>#}
+{#                  </div>#}
+{#            </div>#}
+{#            <a class="mr-auto"><i class="fa fa-android fa-3x "></i></a>#}
+{#            <i class="glyphicon-phone"></i>#}
+{#            <a class="mr-auto"><i class="fa fa-phone fa-2x"></i></a>#}
+{#            <a class="navbar-brand" id="BUTTON" href="#" style="color:black;"><h4>Login</h4></a>#}
+{#            <a class="navbar-brand" href="#" style="color:black;"><h4>/ Up</h4></a>#}
+{#        </nav>#}
+{#        <nav class="navbar top navbar-light" style="border-bottom: solid #5e5e5e 0.1px; background-color: #fff">#}
+{#            <a href="#" class="mr-auto" style="color:black;">#}
+{#                <i class="fa fa-map-marker">Default Address</i></a>#}
+{#            <a class="navbar-brand mr-auto" id="Category_PAGEButton" href="#" style="color:black;"><h5>Categories</h5></a>#}
+{#            <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Shop</h5></a>#}
+{#            <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Offer</h5></a>#}
+{#            <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Instant Offer</h5></a>#}
+{#            <a class="navbar-brand" href="#" style="color:black;"><h5>Profile</h5></a>#}
+{#            <a ><i class="fa fa-shopping-cart fa-2x"></i></a>#}
+{#        </nav>#}
+         <nav class="navbar top navbar-light" style="background-color: #5e5e5e">
+			  <a class="navbar-brand" href="/" style="color:black;"><h3>MyStore</h3></a>
+              <div class="input-group md-form form-sm form-2 pl-0 mr-auto" style="width:600px;">
+                  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search.." aria-label="Search">
+                  <div class="input-group-append" >
+                       <span class="input-group-text red lighten-3" id="basic-text1">
+                           <i class="fa fa-search text-grey" aria-hidden="true" ></i></span>
+                  </div>
+              </div>
+
+            <a class="mr-auto"><i class="fa fa-android fa-3x "></i></a>
+            <a class="mr-auto"><i class="fa fa-phone fa-2x"></i></a>
+
+                {% if logged_in %}
+                    <a class="navbar-brand" id="profile" href="#" style="color:black;">
+                        Profile</a>
+                {% else %}
+                    <a class="navbar-brand" id="BUTTON" href="#" style="color:black;">Login</a>
+                {% endif %}
+          </nav>
+          <nav class="navbar top navbar-light" style="background-color: #5E4746;">
+            <a href="#" class="mr-auto" style="color:black;"><i class="fa fa-map-marker"> Deliver to <br>Default Address</i></a>
+            <a id="Category_PAGEButton" class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Categories</h5></a>
+            <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Shop</h5></a>
+            <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Offer</h5></a>
+            <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Instant Offer</h5></a>
+{#            <a class="navbar-brand" href="#" style="color:black;"><h3>Profile</h3></a>#}
+            <a ><i class="fa fa-shopping-cart fa-2x"></i></a>
+		  </nav>
+
+      </header>
+
+
+<body>
+        {% block body %}
+        {% endblock %}
+</body>
+
+
+
+    <footer>
+{#        <nav class="navbar" style="height:200px;width:100%; margin-top:10px;background-color:black;">#}
+        <nav class="navbar" style="height:300px; margin-top: 100%;background-color:black;">
+            <ul style="float:left;list-style-type:none;">
+            <li style="color:white;"><a><h4>Lorem ipsum</h4></a></li>
+            <li><a  href="#" style="color:white;">dolor</a></li>
+            <li><a href="#" style="color:white;">sit amet</a></li>
+            <li><a href="#" style="color:white;">consectetur</a></li>
+        </ul>
+        <ul style="float:left;list-style-type:none;">
+            <li style="color:white;"><a><h4>Adipisicing</h4></a></li>
+            <li><a href="#" style="color:white;"> Aperiam</a></li>
+            <li><a href="#" style="color:white;"> enim error</a></li>
+            <li><a href="#" style="color:white;"> ducimus</a></li>
+        </ul>
+        <ul style="float:left;list-style-type:none;">
+            <li style="color:white;"><a><h4>Labore</h4></a></li>
+            <li><a href="#" style="color:white;"> pariatur</a></li>
+            <li><a href="#" style="color:white;"> molestiae</a></li>
+            <li><a href="#" style="color:white;"> sapiente</a></li>
+        </ul>
+        <ul style="float:left;list-style-type:none;">
+            <li style="color:white;"><a><h4>About us</h4></a></li>
+            <li ><a href="#" style="color:white;"> exercitationem</a></li>
+            <li ><a href="#" style="color:white;"> voluptas</a></li>
+            <li ><a href="#" style="color:white;"> tempore</a></li>
+        </ul>
+    </nav>
+            <nav class="navbar navbar-dark bg-dark">
+             <h5 style="color:white;">@Copyright</h5>
+            </nav>
+        </footer>
+{#        <div style="height:20px; background:white;"></div>#}
+        <!--last footer  -->
+
+        	      <!--Pop up page  -->
+	      <div class="BG_MODAL">
+			<div class="MODAL_CONTENT">
+			  <div class="CLOSE">+</div>
+			  <form id="SIGNINPAGE" action="{% url 'user:sign-in' %}" method="post">
+                  {% csrf_token %}
+				<input type="text" id="lphone" name="phone" placeholder="Mobile no">
+				<input type="password" id="lpass" name="password" placeholder="Password">
+				<a href="#">Forgot Password?</a>
+{#				<a href="#" class="button">Log In</a>#}
+                  <button type="submit" class="button">Login</button>
+				<br><br>
+
+				<button  type="button" id="SIGNUP" class="btn">New to Web? Sign up</button>
+			  </form>
+			  <form id="SIGNUPPAGE" action="{% url 'user:sign-up' %}" method="post">
+                  {% csrf_token %}
+				<input type="text" id="sphone" name="phone" placeholder="Mobile no">
+                  <input type="text" id="semail" name="email" placeholder="email">
+				<input type="password" id="spass" name="password" placeholder="Password">
+				<input type="password" id="scpass" placeholder="ReEnter Password">
+{#				<a href="#" class="button">Sign Up</a>#}
+                  <button type="button" id="SIGNUP2" class="btn btn-outline-light">
+                      Existing User? Log in</button>
+                  &nbsp;
+                <button type="submit" class="button">Sign Up</button>
+				<br>
+			  </form>
+			</div>
+		  </div>
+
+
+
+        		  <!--Category-->
+
+		  <div class="Category_PAGE">
+			  <div class="Category_PAGE_Inside" >
+				<div class="CLOSECategory_PAGE" style="color: white;">+</div><br><br>
+				<button class="accordion" >Cloth </button>
+				<div class="panel">
+					  <div class="List">
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+                                <li><a href="#">About</a></li>
+					  </div>
+					  <div class="List">
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+					  </div>
+
+				</div>
+
+				<button class="accordion"> Grocery</button>
+				<div class="panel">
+						<div class="List">
+								  <li><a href="#">Product list</a></li>
+								  <li><a href="#">Reviews</a></li>
+								  <li><a href="#">About</a></li>
+								  <li><a href="#">Product list</a></li>
+								  <li><a href="#">Reviews</a></li>
+								  <li><a href="#">About</a></li>
+								  <li><a href="#">Product list</a></li>
+								  <li><a href="#">Reviews</a></li>
+								  <li><a href="#">About</a></li>
+
+						</div>
+						<div class="List">
+							  <li><a href="#">Product list</a></li>
+							  <li><a href="#">Reviews</a></li>
+							  <li><a href="#">About</a></li>
+							  <li><a href="#">Product list</a></li>
+							  <li><a href="#">Reviews</a></li>
+							  <li><a href="#">About</a></li>
+							  <li><a href="#">Product list</a></li>
+							  <li><a href="#">Reviews</a></li>
+							  <li><a href="#">About</a></li>
+						</div>
+
+				  </div>
+				  <button class="accordion" >Stationary </button>
+				<div class="panel">
+					  <div class="List">
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+
+					  </div>
+					  <div class="List">
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+					  </div>
+				</div>
+
+                <button class="accordion" >Books</button>
+				<div class="panel">
+					  <div class="List">
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Product list</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">About</a></li>
+
+					  </div>
+					  <div class="List">
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Product list</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">About</a></li>
+					  </div>
+				</div>
+			  </div>
+		  </div>
+
+
+      <script>
+
+
+
+           document.getElementById('BUTTON').addEventListener('click',function(){
+           document.querySelector('.BG_MODAL').style.display='flex';
+         });
+		//document.getElementById('SIGNUP').addEventListener('click',function(){
+		//	document.querySelector('SIGNUPPAGE').style.display='flex';
+		//	document.querySelector('SIGNINPAGE').style.display='none';
+
+        // });
+		    $(document).ready(function(){
+             	$("#SIGNUP").click(function(){
+             		$("#SIGNINPAGE").toggle();
+             		$("#SIGNUPPAGE").toggle();
+             	});
+             });
+			 $(document).ready(function(){
+             	$("#SIGNUP2").click(function(){
+             		$("#SIGNINPAGE").toggle();
+             		$("#SIGNUPPAGE").toggle();
+             	});
+             });
+
+
+           document.querySelector('.CLOSE').addEventListener('click',function(){
+           document.querySelector('.BG_MODAL').style.display='none';
+		 });
+
+		 //Category Script
+		 document.getElementById('Category_PAGEButton').addEventListener('click',function(){
+           document.querySelector('.Category_PAGE').style.display='flex';
+         });
+		 document.querySelector('.CLOSECategory_PAGE').addEventListener('click',function(){
+           document.querySelector('.Category_PAGE').style.display='none';
+		 });
+
+		 var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                   panel.style.maxHeight = null;
+                } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+              });
+            }
+
+		var slideIndex = 1;
+         showSlides(slideIndex);
+
+         function plusSlides(n) {
+           showSlides(slideIndex += n+2);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+          }
+		  for(i=0;i<slides.length;i++){
+                var NewSlides2=[slideIndex-1,slideIndex,slideIndex+1];
+
+            for (k=0; k<3; k++)
+                slides[NewSlides2[k]].style.display = "inline-block";
+            }
+
+        //slides[slideIndex-1].style.display = "block";
+       }
+		 var slideIndex2 = 1;
+         showSlides2(slideIndex2);
+
+         function plusSlides2(q) {
+           showSlides2(slideIndex2 += q+2);
+        }
+
+        function showSlides2(q) {
+          var i, k;
+          var slides2 = document.getElementsByClassName("mySlides2");
+          if (q > slides2.length) {slideIndex2 = 1}
+          if (q < 1) {slideIndex2 = slides2.length}
+          for (i = 0; i < slides2.length; i++) {
+             slides2[i].style.display = "none";
+          }
+
+		  for(i=0;i<slides2.length;i++){
+                var NewSlides3=[slideIndex2-1,slideIndex2,slideIndex2+1];
+
+            for (k=0; k<3; k++)
+                slides2[NewSlides3[k]].style.display = "inline-block";
+            }
+
+        //slides2[slideIndex2-1].style.display = "block";
+       }
+		 var slideIndex3 = 1;
+         showSlides3(slideIndex3);
+
+         function plusSlides3(r) {
+           showSlides3(slideIndex3 += r+2);
+        }
+
+        function showSlides3(r) {
+          var i;
+          var slides3 = document.getElementsByClassName("mySlides3");
+          if (r > slides3.length) {slideIndex3 = 1}
+          if (r < 1) {slideIndex3 = slides3.length}
+          for (i = 0; i < slides3.length; i++) {
+             slides3[i].style.display = "none";
+          }
+		  for(i=0;i<slides3.length;i++){
+                var NewSlides2=[slideIndex3-1,slideIndex3,slideIndex3+1];
+
+            for (k=0; k<3; k++)
+                slides3[NewSlides2[k]].style.display = "inline-block";
+            }
+
+        //slides3[slideIndex3-1].style.display = "block";
+       }
+
+	   var slideIndex4 = 1;
+         showSlides4(slideIndex4);
+
+         function plusSlides4(n) {
+           showSlides4(slideIndex4 += n+5);
+        }
+
+        function showSlides4(n) {
+            var i;
+            var slides4 = document.getElementsByClassName("mySlides4");
+            if (n > slides4.length) {
+                slideIndex4 = 1
+            }
+            if (n < 1) {
+                slideIndex4 = slides4.length
+            }
+            for (i = 0; i < slides4.length; i++) {
+                slides4[i].style.display = "none";
+            }
+            for (i = 0; i < slides4.length; i++) {
+                var NewSlides4 = [slideIndex4 - 1, slideIndex4, slideIndex4 + 1, slideIndex4 + 2, slideIndex4 + 3, slideIndex4 + 4];
+
+                for (k = 0; k < 6; k++)
+                    slides4[NewSlides4[k]].style.display = "inline-block";
+            }
+        }
+      </script>
+	</body>
+  </html>

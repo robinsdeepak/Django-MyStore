@@ -1,0 +1,51 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'user/css/Style4Profile.css' %}">
+
+   {% block body %}
+    <style>body{background-color:#ecf0f1;}</style>
+
+            <div class="LEFTSIDE">
+                <a href="#DIV1"><div class="PersonalDetails">
+                        
+                </div></a>
+                <div class="PersonalDetails" style="height:650px;">
+                    <div class="SECTION1" ><a href="#" style="color:black;">My Order &#10095;</a></div>
+                    <div class="SECTION2" >
+                        <h4 style="cursor:auto;">Account Setting</h4>
+                     <ul>
+                            <li><a><h5>Profile Information</h5></a></li>
+                            <li><a><h5>Manage Addresses</h5></a></li>
+                            <li><a><h5>Notification Setting</h5></a></li>
+                            <li><a><h5>PAN Card Information</h5></a></li>
+                     </ul>
+                    </div>
+                    <div class="SECTION3" >
+                            <h4 style="cursor:auto;">PAYMENTS</h4>
+                         <ul>
+                                <li><a><h5>Wallet</h5></a></li>
+                                <li><a><h5>Gift Card</h5></a></li>
+                                <li><a><h5>Saved Card</h5></a></li>
+                         </ul>
+                    </div>
+                    <div class="SECTION4" >
+                            <h4 style="cursor:auto;">My Stuff</h4>
+                         <ul>
+                                <li><a><h5>Rewards</h5></a></li>
+                                <li><a><h5>Reviews</h5></a></li>
+                                <li><a><h5>All Notification</h5></a></li>
+                                <li><a><h5>My Wishlist</h5></a></li>
+                         </ul>
+                    </div>
+                    <div class="SECTION1" ><a href="{% url 'logout' %}" style="color:black;">Log out</a></div>
+                    
+            
+                </div>
+            </div>
+            <div class="Details">
+
+            </div>
+        <script>
+        </script>
+
+    {% endblock %}

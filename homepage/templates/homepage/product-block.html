@@ -1,0 +1,6 @@
+{% load static %}
+    <a href="#"><b style="color: black;">{{ product.name }}</b></a><br>
+    <img class="ProductImageNew" src="{{ product.image_link.url }}"><br>
+    <b class="PriceDetailsInTemplate"><small><del>MRP Rs. {{ product.price }}</del></small><br>Price Rs. {{ product.price }}</b><br>
+    <a href="#"><img src="{% static 'homepage/Pics/checkout.png' %}" class="BuyNowButtonStyle" alt="Buy"></a>
+    <a href="#"><i class="fas fa-cart-plus AddToCartButtonStyle"></i></a>

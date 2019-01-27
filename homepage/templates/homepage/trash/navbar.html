@@ -1,0 +1,30 @@
+    <nav class="navbar top navbar-light" style="background-color: #5e5e5e">
+        <a class="navbar-brand" href="/" style="color:black;"><h3>MyStore</h3></a>
+        <div class="input-group md-form form-sm form-2 pl-0 mr-auto" style="width:600px;">
+            <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search.." aria-label="Search">
+            <div class="input-group-append" >
+                <span class="input-group-text red lighten-3" id="basic-text1">
+                <i class="fa fa-search text-grey" aria-hidden="true" ></i></span>
+            </div>
+        </div>
+        <a class="mr-auto"><i class="fa fa-android fa-3x" style="width: 34px;"></i></a>
+        <a class="mr-auto"><i class="fa fa-phone fa-2x" style="width: 34px;"></i></a>
+
+        {% if user.is_authenticated %}
+            <a class="navbar-brand" id="BUTTON" href="#" style="color:black;">
+                {% include 'homepage/profile.html' %}
+            </a>
+        {% else %}
+            <button class="btn btn-outline-secondary" type="button" id="BUTTON">Login</button>
+        {% endif %}
+    </nav>
+
+    <nav class="navbar top navbar-light" style="background-color: #5E4746;">
+        <a href="#" class="mr-auto" style="color:black;"><i class="fa fa-map-marker"> Deliver to <br>Default Address</i></a>
+        <a id="Category_PAGEButton" class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Categories</h5></a>
+        <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Shop</h5></a>
+        <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Offer</h5></a>
+        <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Instant Offer</h5></a>
+        {#            <a class="navbar-brand" href="#" style="color:black;"><h3>Profile</h3></a>#}
+        <a ><i class="fa fa-shopping-cart fa-2x"></i></a>
+    </nav>

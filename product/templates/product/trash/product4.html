@@ -1,0 +1,120 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block body %}
+
+{#     css for product        #}
+<link rel="stylesheet" href="{% static 'product/CSS/Style4product2.css' %}">
+
+
+<div class="container-fluid" style="background-color:grey;">
+    <div class="Heading4Mobile">
+        <p class="Paragraph4M">
+        <h4 style="text-align:center;color:black;">recomended products</h4>
+        <h6 style="text-align:center;color:black;">by
+            <a style="color:black;" href="#"> nearest shop</a>
+        </h6>
+    </div>
+    {# product image #}
+    <div class="ProductImg" >
+       <div style="height:80%;background-color:#fff;border-bottom:1px solid black">
+            <img src="{{ product.image_link.url }}" class="img-fluid"
+                 style="margin:10px; padding-right:20px;padding-bottom:20px;" alt="product_Image">
+       </div>
+       <div style="height:20%;background-color:#fff;text-align:center;">
+           <a href="#" style="color:black;"><h6>Rate and Report</h6></a>
+       </div>
+    </div>
+
+   {# product name, shop name and nearest shop #}
+    <div class="PINCheck">
+       <div class="Heading4Laptop" style="width:95%;background-color:brown;margin:10px;">
+           <h2 style="margin:10px;padding-top:20px;color:black;">{{ product.name }}</h2>
+           <h3 style="margin:20px;padding-bottom:20px;color:black;">by <a style="color:black;" href="#"> Nearest Shop{{ shop_name }}</a>
+           </h3>
+       </div>
+
+        {# product description #}
+       <section>
+           <div style="border-bottom:1px solid black;"><h4>Features</h4>
+               <ul>
+                    <li>Type of product : {{ product.type }}</li>
+                    <li>Weight :{{ product.weight }}</li>
+                    <li>Flavour :{{ Flavour }}</li>
+                    <li>Brand :{{ product.Brand }}</li>
+               </ul>
+                    <br>
+               <a href="#More2">More details</a>
+           </div>
+            <div>
+                <h4>Check availability and COD on your location</h4>
+                <form class="form-inline" style="margin-bottom:10px;">
+                    <input class="form-control mr-sm-2" type="search"
+                           placeholder="Enter your Pincode" aria-label="Search">
+                    <!-- after entering 6 digits, availability will be shown -->
+{#                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Check</button>#}
+                </form>
+            </div>
+        </section>
+
+        <aside class="ASIDE"><h6 style="text-align:center;">More from {{ product.Brand }}</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque consectetur,
+                debitis eaque et expedita magni odit sint tempora voluptates.</p>
+        </aside>
+    </div>
+    <div class="BuyProduct">
+        <div style="border-bottom:1px solid black;">
+            <h5><del>Price Rs. {{ price }}</del></h5>
+            {# applicable_discount and other variable prices need to be controlled by JavaScript #}
+            <h1>Rs. {{ price }}{# x selected quantity x  1 - applicable_discount #} </h1>
+            <a href="#" style="padding-left:20%;">(Know more)</a>
+            <h5>Price per piece Rs {{ product.price }}{#  x (1 - applicable_discount) #}</h5>
+            <h5>({# applicable_discount x #} 100 % OFF) You saved Rs {{ product.price }}{#  x applicable_discount #}</h5>
+        </div>
+        <div style="border-bottom:1px solid black;">
+            <h3 style="margin-top:10px; margin-bottom:10px;">Buy in bulk & save more</h3>
+        </div>
+        <div>
+            <table class="table">
+                <thead style="background-color:#f1f1f1;">
+                    <tr>
+                        <th>Select</th>
+                        <th>Quantity</th>
+                        <th>Discount</th>
+                        <th> Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>1-4</td>
+                        <td>dsct.1-4%</td>
+                        <td>{{ price }}{#  x (1 - dsct.1-4 / 100) #} /-</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>5-8</td>
+                        <td>dsct.5-8%</td>
+                        <td>{{ price }}{#  x (1 - dsct.5-8 / 100) #} /-</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9+</td>
+                        <td>dsct.9+%</td>
+                        <td>{{ price }}{#  x (1 - dsct.9+ / 100) #}/-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-primary" style="width:100%;"><h4>Buy Now</h4></button>
+            <button type="button" class="btn" style="width:100%; background-color:lightgreen;
+            margin-top:10px;color:white;"><h5>Add to cart</h5></button>
+        </div>
+    </div>
+    <div id="More2" class="More">
+       <h2>Product Specifications</h2>
+        {{ product.product_info }}<br>
+       <h6 style="border-bottom:1px dotted black;height:50px;">Weight:</h6>
+       <h6 style="border-bottom:1px dotted black;height:50px;">Weight:</h6>
+       <h6 style="border-bottom:1px dotted black;height:50px;">Weight:</h6>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'homepage/base.html' %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Add a New Shop</h3>
+{#                    {% if error_message %}#}
+{#                        <p><strong>{{ error_message }}</strong></p>#}
+{#                    {% endif %}#}
+                    <form action="" class="form-horizontal" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'shop/form-template.html' %}
+                        <div class="form-group">
+                            <div class="col-lg-2 col-lg-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+    <form action="" enctype="multipart/form-data">
+        <label for="title">Name of Shop</label>
+        <input type="text" name="title" id="title">
+
+        <label for="address_line_1">Address Line 1</label>
+        <input type="text" name="address_line_1" id="address_line_1">
+
+        <label for="address_line_2">Address Line 2</label>
+        <input type="text" name="address_line_2" id="address_line_2">
+
+        <label for="address_State">State</label>
+        <input type="text" name="address_State" id="address_State">
+
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location">
+
+        <label for="about">About your Shop</label>
+        <input type="text" name="about" id="about">
+
+        <label for="Shop_icon_1">Choose a Photo</label>
+        <input type="image" name="Shop_icon_1" id="Shop_icon_1">
+
+        <label for="Shop_icon_2">Choose another Photo</label>
+        <input type="image" name="Shop_icon_2" id="Shop_icon_2">
+
+    </form>
+ -->
+{% endblock %}

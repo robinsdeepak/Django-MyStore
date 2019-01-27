@@ -1,0 +1,75 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="container-fluid" >
+        <div style="height:150px; width:100%;/*background-color:#fff;*/float:left;border-bottom:1px solid black;border-bottom-left-radius:70px;border-top-left-radius:70px;">
+                <img src="{{ shop.Shop_icon.url }}" class="rounded-circle" style="width:150px;height:150px;float:left;" alt="Shop Image">
+                <div>
+                    <h4 style="float:left;text-align:center;padding-top:10px;"><a href="#" style="color:black;">{{ shop.title }}</a></h4>
+                    <h3 style="text-align:center;padding-top:10px;"><a href="#" style="color:black;">About|</a><a href="#" style="color:black;">Direction</a></h3>
+                </div>
+        </div>
+
+        {# Another Shop Photo with full width #}
+        <img src="{{ shop.Shop_icon_2.url }}" class="img" style="width:100%;padding-top:10px;" alt="Shop Image">
+
+        <b style="text-align: center;"><strong>New Products</strong></b>
+        <div class="container" style="margin-top: 10px; align-items: center; width: 100%;">
+
+            {% for product in products %}
+                <div class="product" style=" width:200px; height: 250px; border: 0.1px solid grey; padding: 2px;background-color: #fff; float: left; margin: 5px;">
+                    <a href="{% url 'product:productView' product.shop_product.pk %}" style=" text-decoration: none;"><h6 style="text-align: center;">
+                        <img src="{{ product.shop_product.image_link.url }}" alt="thumbnail" width="150px" ><br>
+                        {{ product.shop_product.name }}</h6></a>
+                </div>&nbsp;
+            {% endfor %}
+        </div>
+
+
+        <div id="tabs">
+             <div id="tabs-1" style="height:240px">
+                    <ul style="float:left;width:50%;">
+                        <li><a href="#">Product list</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product list</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product list</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                    <ul style="float:left;width:50%;">
+                        <li><a href="#">Product list</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product list</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product list</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+            </div>
+
+            <div id="tabs-2">
+                   <h4><b>What people say about {{ shop.title }}</b> </h4>
+                     <p><strong>Rating: </strong><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+                     <h5><b>5 Star</b> <meter min="0" max="10" value="5"></meter><br></h5>
+                     <h5><b>4 Star</b> <meter min="0" max="10" value="4"></meter><br></h5>
+                     <h5><b>3 Star</b> <meter min="0" max="10" value="2"></meter><br></h5>
+            </div>
+
+            <div id="tabs-3"><h3><b>Comments:-</b></h3>
+                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur debitis dolore, doloremque ea, eius error ex explicabo iste itaque nostrum possimus quasi quibusdam ratione voluptates? Architecto autem dolores, dolorum eligendi est exercitationem hic iure rem sed unde. Deleniti dolorum maxime, molestias provident quia tempora vitae! Ab, modi, rem! Asperiores assumenda aut ea, ipsa iure magni maxime officia, pariatur porro possimus quis quod recusandae repellendus sint veritatis! Accusamus autem doloribus esse ipsum laboriosam quisquam tempora!</P>
+            </div>
+
+        </div>
+    </div>
+    <div class="container fluid" style="width: 100%; text-align: center;">
+        <div class="row justify-content-lg-start">
+            <a href="{% url 'Shop:add-review' shop.pk %}"><button class="btn btn-outline-secondary"><strong>Add a Review</strong></button></a>
+        </div>
+    </div>
+{% endblock %}

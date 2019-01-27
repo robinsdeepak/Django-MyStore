@@ -1,0 +1,82 @@
+{% extends 'homepage/new-base.html' %}
+{% load static %}
+{% block title %}MyStore{% endblock %}
+{% block body %}
+
+    <link rel="stylesheet" href="{% static 'homepage/CSS/style-for-product-block-on-homepage.css' %}">
+    <div class="container" style="margin-top:5px; text-align: center; align-content: center">
+        <div class="row justify-content-center">
+            <a href="/admin/"><button class="btn btn-outline-secondary">Admin</button></a>&nbsp;
+            <a href="{% url 'order:list' %}"><button class="btn btn-outline-secondary">Your Order</button></a>&nbsp;
+            <a href="{% url 'product:product-list' %}"><button class="btn btn-outline-secondary">Product</button></a>&nbsp;
+            <a href="{% url 'Shop:shop-list' %}"><button class="btn btn-outline-secondary">Shop</button></a>&nbsp;
+        </div>
+    </div>
+
+    	  <div class="container-fluid" style="background-color:#fff;">
+				<div class="SlidSHow">
+					<div class="NewProduct ">
+						<b>Trending</b><br>
+                        {% for product in trending_products %}
+                            {% include 'homepage/product-block.html' %}
+                        {% endfor %}
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="SlidSHow4">
+                    <div class="ShopList">
+                        <b>Shops near you</b><br>
+                        {% for shop in nearby_shops %}
+                            <div class="Ashop mySlides4" style="background:#111">
+                                {% include 'homepage/shop-block.html' %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a class="prev4" onclick="plusSlides4(-1)">&#10094;</a>
+                    <a class="next4" onclick="plusSlides4(1)">&#10095;</a>
+                </div>
+
+                <div class="SlidSHow2">
+                    <div class="NewProduct">
+                        <b>Product near You.</b><br>
+                        {% for product in nearby_products %}
+                            {% include 'homepage/product-block.html' %}
+                        {% endfor %}
+                    </div>
+                    <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                    <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                </div>
+
+                <div class="SlidSHow3">
+				    <div class="NewProduct ">
+					    <b>history</b><br>
+                        {% for product in history_product %}
+                            {% include 'homepage/product-block.html' %}
+                        {% endfor %}
+                    </div>
+                <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+				<a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+                </div>
+          </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                }
+                else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script src="{% static 'homepage/JS/homepage-sliders.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container" style="margin-top: 10px; align-items: center;">
+            {% for shop in shops %}
+                <div class="shop" style=" width:200px; height: 180px; border: 0.1px solid grey; padding: 2px;background-color: #fff; float: left; margin: 5px;">
+                    <a href="{% url 'Shop:shop-detail' shop.pk %}" style="text-decoration: none;"><h6 style="text-align: center;">
+                        <img src="{{ shop.Shop_icon.url }}" alt="thumbnail" width="180px" ><br>
+                        {{ shop.title }}</h6></a>
+                </div>&nbsp;
+            {% endfor %}
+    </div>
+    <div class="container fluid" style="width: 100%; text-align: center;">
+        <div class="row justify-content-lg-start">
+            <a href="{% url 'Shop:add-shop' %}">
+                <button class="btn btn-outline-secondary"><strong>Add a Shop</strong>
+                </button></a>
+        </div>
+    </div>
+{% endblock %}

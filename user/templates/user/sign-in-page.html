@@ -1,0 +1,40 @@
+{% extends 'homepage/base.html' %}
+
+{% block title %}Sign In{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+    <div class="BG_MODAL1 col">
+			<div class="MODAL_CONTENT">
+			  <form id="SIGNINPAGE" action="{% url 'user:sign-in' %}" method="post">
+                  {% csrf_token %}
+				<input type="text" id="lphone" name="phone" placeholder="Mobile no">
+				<input type="password" id="lpass" name="password" placeholder="Password">
+                  <input type="hidden" name="current_url" value="{{ current_path }}">
+
+				<a href="#">Forgot Password?</a>
+                  <button type="submit" class="button">Login</button>
+				<br><br>
+
+				<button  type="button" id="SIGNUP" class="btn">New to Web? Sign up</button>
+			  </form>
+
+			  <form id="SIGNUPPAGE" action="{% url 'user:sign-up' %}" method="post">
+                  {% csrf_token %}
+				<input type="text" id="sphone" name="phone" placeholder="Mobile no">
+                  <input type="text" id="semail" name="email" placeholder="email">
+				<input type="password" id="spass" name="password" placeholder="Password">
+				<input type="password" id="scpass" placeholder="ReEnter Password">
+                  <button type="button" id="SIGNUP2" class="btn btn-outline-light">
+                      Existing User? Log in</button>&nbsp;
+                <button type="button" class="button">Sign Up</button><br>
+			  </form>
+
+			</div>
+		  </div>
+    </div>
+    <script>
+    </script>
+
+{% endblock %}

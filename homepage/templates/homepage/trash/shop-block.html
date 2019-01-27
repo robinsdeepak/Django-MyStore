@@ -1,0 +1,9 @@
+{% load static %}
+
+    <div style="width:90%;display:inline-block;">
+        <a href="{% url 'Shop:shop-detail' shop.pk%}" style="text-decoration: none;">
+         <img src="{{ shop.Shop_icon.url }}" style="border-radius:50%;width:85%;height:100px;margin-top:2px;margin-left:11%" alt="image"><br>
+         <b style="padding-left:35%;">{{ shop.title }}</b>
+        </a>
+         <button type="button" class="btn btn-primary" style="width:90%;margin-left:7%;height:35px;"><b style="text-align:center;">View</b></button>
+    </div>

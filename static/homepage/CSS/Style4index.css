@@ -1,0 +1,394 @@
+header{
+    padding-top: 0px;
+}
+
+.BG_MODAL{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.MODAL_CONTENT{
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border: 5px solid #c8c8c8;
+}
+.CLOSE{
+ position: absolute;
+ top: 0;
+ right: 14px;
+ font-size: 42px;
+ transform: rotate(45deg);
+ cursor: pointer;
+}
+#SIGNINPAGE{
+  text-align: center;
+  padding-left: 25%;
+}
+#SIGNUPPAGE{
+  text-align: center;
+  padding-left: 25%;
+  display: none;  
+}
+input{
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid red;
+}
+.button {
+	background-color: blue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px 28px;
+	color: white;
+	margin-top: 10px;
+  display: inline-block;
+  
+}
+#SIGNUP{
+  margin-top: 2%;
+  width: 60%;
+  background-color: white;
+  border-style: groove;
+  border-color: gainsboro;
+  color: blue;
+}
+#SIGNUP2{
+  margin-top: 2%;
+  width: 60%;
+  background-color: white;
+  border-style: groove;
+  border-color: gainsboro;
+  color: blue;
+}
+
+.input-group.md-form.form-sm.form-2 input.red-border  {
+    border: 1px solid #ef9a9a;
+
+}
+/* Category Inside */
+.Category_PAGE{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  display: none;
+  align-items: center;
+}
+.Category_PAGE_Inside{
+  width: 25%;
+  min-height: 100%;
+  background-color: rgb(207, 202, 202);
+  top: 0;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+.CLOSECategory_PAGE{
+   position: absolute;
+ top: 0;
+ right: 14px;
+ font-size: 42px;
+ transform: rotate(45deg);
+ cursor: pointer;
+}
+@media only screen and (max-width: 700px) {
+  .Category_PAGE_Inside {width:70%;}
+}
+.Inside_ClothTotal{
+  display: none;
+}
+.List{
+	display:inline-block;
+	width:40%;
+    margin:0px;
+    text-align: left;
+    margin-left:5%;
+}
+li{
+  list-style-type:none;
+}
+Inside_GroceryTotal{
+  display: none;
+}
+.accordion {
+  background-color: #eee;
+ color: #444;
+ cursor: pointer;
+ padding: 18px;
+ width: 100%;
+ border: none;
+ text-align: left;
+ outline: none;
+ font-size: 15px;
+ transition: 0.4s;
+}
+
+.active, .accordion:hover {
+ background-color: #ccc;
+}
+
+.accordion:after {
+ content: '\002B';
+ color: #777;
+ font-weight: bold;
+ float: right;
+ margin-left: 5px;
+}
+
+.active:after {
+content: "\2212";
+}
+
+.panel {
+padding: 0 18px;
+background-color: white;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+}
+
+
+.mySlides {display: none}
+
+/* Slideshow container */
+.SlidSHow{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+   right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.4);
+height: 50%;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+.mySlides2 {display: none}
+
+/* Slideshow container */
+.SlidSHow2{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev2, .next2{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next2 {
+   right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev2:hover, .next2:hover {
+background-color: rgba(0,0,0,0.4);
+height: 50%;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev2, .next2,.text {font-size: 11px}
+}
+
+.mySlides3 {display: none}
+
+/* Slideshow container */
+.SlidSHow3{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev3, .next3{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next3 {
+   right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev3:hover, .next3:hover {
+background-color: rgba(0,0,0,0.4);
+height: 50%;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev3, .next3,.text {font-size: 11px}
+}
+
+
+.mySlides4 {display: none}
+
+/* Slideshow container */
+.SlidSHow4{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev4, .next4{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next4 {
+   right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev4:hover, .next4:hover {
+background-color: rgba(0,0,0,0.4);
+height: 50%;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev4, .next4,.text {font-size: 11px}
+}
+
+
+
+
+.navbarcustom{
+    background: black;
+}
+.LI{
+	color:white;
+}
+
+.LI a:hover{
+
+ font-size: 30px;
+ font-weight: bold;
+}
+.NewProduct{
+	width:100%;
+	height:200px;
+	background-color:#c8c8c8;
+	border-bottom:1px solid black;
+	margin-top:10px;
+}
+.NewPro{
+	height:165px;
+	border:1px solid black;
+	margin-top:5px;
+	width:28%;
+	margin-left:1%;
+	display:inline-block;
+	margin-bottom:2px;
+}
+.ShopList{
+	width:100%;
+	height:195px;
+	background-color: #c8c8c8;
+	border-bottom:1px solid black;
+	margin-top:10px;
+}
+.Ashop{
+	height:165px;
+	border:1px solid black;
+	margin-top:0px;
+	width:15%;
+	margin-left:1%;
+	display:inline-block;
+	margin-bottom:2px;
+}
+
+@media only screen and (max-width: 720px) {
+	.NewPro{
+		width:90%;
+		margin-left: 6%;
+	}
+	.NewProduct{
+		height:auto;
+		min-height:200px;
+	}
+	.Ashop{
+		width:40%
+	}
+	.ShopList{
+		height:auto;
+		min-height:200px;
+	}
+}

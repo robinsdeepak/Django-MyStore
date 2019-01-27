@@ -1,0 +1,11 @@
+{% extends 'homepage/base.html' %}
+{% block body %}
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="rating">Rating</label>
+    <input type="text" name="rating" id="rating">
+    <label for="comment">Comment</label>
+    <input type="text" name="comment" id="comment">
+    <button type="submit">submit</button>
+</form>
+{% endblock %}
