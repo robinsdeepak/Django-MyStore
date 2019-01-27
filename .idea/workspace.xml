@@ -389,10 +389,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.MySite" />
       <item itemvalue="JavaScript Debug.base.html" />
       <item itemvalue="JavaScript Debug.new-base.html" />
       <item itemvalue="Python.views" />
+      <item itemvalue="Django server.MySite" />
     </list>
     <recent_temporary>
       <list>
