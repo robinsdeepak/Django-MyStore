@@ -4,7 +4,7 @@ from . import models
 
 class OrderProduct(admin.StackedInline):
     model = models.user_order_products
-    extra = 1
+    extra = 3
 
 
 class OrderDataAdmin(admin.ModelAdmin):

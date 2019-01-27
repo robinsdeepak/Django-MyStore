@@ -1,0 +1,15 @@
+from order.models import user_order
+from django.contrib.auth.models import User
+user=User.objects.get(username='Deepak')
+
+orders=user_order.objects.filter(user=user)
+
+for order in orders:
+	product_sets = order.user_order_products_set.all()
+	for product_set in product_sets:
+		product_set.ordered_product.name
+
+
+for order in orders:
+	for product_set in order.user_order_products_set.all:
+		product_set.ordered_product.name

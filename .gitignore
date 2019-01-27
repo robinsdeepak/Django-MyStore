@@ -1,6 +1,6 @@
 *.xml
-.idea/misc.xml
-.idea/mysite.iml
+.idea/*.xml
+.idea/*.iml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

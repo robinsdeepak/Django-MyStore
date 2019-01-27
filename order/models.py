@@ -17,12 +17,13 @@ class user_order(models.Model):
     date_ordered = models.DateTimeField(default=timezone.now)
     total_amount = models.DecimalField(null=True, decimal_places=2, max_digits=9)
 
-    def __repr__(self):
-        return 'Order from ' + self.ordered_from_shop.title
+    def __str__(self):
+        return self.user.username + '\'s Order from ' + self.ordered_from_shop.title
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
-        self.total_amount = sum([product.product_price for product in self.user_order_products_set.all()])
+    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
+        x = sum([(product.ordered_quantity * product.ordered_product.price) for product in self.user_order_products_set.all()])
+        print(x)
+        self.total_amount = x
         super().save()
 
 
@@ -31,18 +32,26 @@ class user_order(models.Model):
 # instance for one user_order instance
 class user_order_products(models.Model):
     class Meta:
-        verbose_name = 'Ordered Products'
+        verbose_name = 'Ordered Product'
+        verbose_name_plural = 'Ordered Products'
         db_table = 'Ordered Products'
 
     for_order = models.ForeignKey(user_order, on_delete=models.CASCADE)
-    ordered_product = models.ManyToManyField(product_data)
+    ordered_product = models.ForeignKey(product_data, on_delete=models.PROTECT)
     # shipping address will be imported from user model
     # shipping_address = models.ForeignKey(User_address, on_delete=models.CASCADE)
 
     # ordered quantity will be show in user order history
     # and quantity_available will decrease from the shop
     ordered_quantity = models.IntegerField(default=1, choices=numbers)
-    product_price = models.DecimalField(max_digits=9, decimal_places=2)
+    product_price = models.DecimalField(null=True, max_digits=9, decimal_places=2)
+
+    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
+        self.product_price = self.ordered_product.price * self.ordered_quantity
+        super().save()
+
+    def __str__(self):
+        return self.for_order.user.username + '\'s Products ordered from ' + self.for_order.ordered_from_shop.title
 
 
 # 1. need to find a dictionary like model for the user_order, as this is not the proper way.

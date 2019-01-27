@@ -55,36 +55,33 @@
                     <button class="btn btn-outline-info" style="height: 38px; width: 150px;">Contact Support</button>
                 </div>
             </div>
-            <!-- Shipments -->
 
-                {% for shipment_sets in order.user_order_products_set.all %}
-                    {% for shipment in shipment_sets.ordered_product.all %}
+            <!-- Shipments -->
+                {% for shipment_set in order.user_order_products_set.all %}
                         <div class="row a-box-shipment" style="background-color: #fff; height: 120px; border-radius: 5px;">
                             <div class="col-sm-2" style="padding-top: 10px;">
-                                <a href="{% url 'product:productView' shipment.pk %}" style="text-decoration: None;">
-                                <img src="{{ shipment.image_link.url }}" alt="image"
+                                <a href="{% url 'product:productView' shipment_set.ordered_product.pk %}" style="text-decoration: None;">
+                                <img src="{{ shipment_set.ordered_product.image_link.url }}" alt="image"
                                      style=" height: 80px;"></a>
                             </div>
 
                             <div class="col-sm-6" style="padding-top: 10px;">
                                     <span style="color: #1b1e21;"><strong>
-                                        <a href="{% url 'product:productView' shipment.id %}" style="text-decoration: None;">{{ shipment.name }}</a></strong></span><br>
-                                    <span>Qty: {{ shipment_sets.ordered_quantity }}</span>
+                                        <a href="{% url 'product:productView' shipment_set.ordered_product.id %}" style="text-decoration: None;">{{ shipment_set.ordered_product.name }}</a></strong></span><br>
+                                    <span>Qty: {{ shipment_set.ordered_quantity }}</span>
                             </div>
 
                             <div class="col-sm-4" style="text-align: center; padding-top: 10px;">
-                                <span><strong>Price:</strong> Rs.{{ shipment_sets.product_price }}</span>
+                                <span><strong>Price:</strong> Rs.{{ shipment_set.product_price }}</span>
                             </div>
                         </div>
 
                     {% endfor %}
-                {% endfor %}
 {##}
             </div>
         </div>
 
         {% endfor %}
-    {#                        endfor                         #}
 
     </div>
     <style>
