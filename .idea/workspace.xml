@@ -1,63 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d83f6816-c81f-4341-9a75-02bdb3daab50" name="Default Changelist" comment=";">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/CSS/Style4index.css" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/static/homepage/CSS/Style4index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/CSS/Style4product2.css" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/static/homepage/CSS/Style4product2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/CSS/Style4shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/static/homepage/CSS/Style4shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/CSS/style-for-product-block-on-homepage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/JS/homepage-sliders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/Pics/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/Pics/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/Pics/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/static/homepage/Pics/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/02-base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/02-homepage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/03-base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/IndexMy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/product-block.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/product-block.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/shop-block.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/shop-block.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/sign-in-up-popup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1200145_2-britannia-premium-bake-rusk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1200145_2-britannia-premium-bake-rusk.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1200161_2-britannia-biscuits-marie-gold.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1200161_2-britannia-biscuits-marie-gold.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1200588_2-cadbury-oreo-biscuit-vanilla-creme.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1200588_2-cadbury-oreo-biscuit-vanilla-creme.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1200589_2-bb-combo-oreo-vanilla-creme-biscuits-120gm-bournvita-pro-health-chocolate-cookies-120gm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1200589_2-bb-combo-oreo-vanilla-creme-biscuits-120gm-bournvita-pro-health-chocolate-cookies-120gm.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1201304_1-britannia-nutri-choice-hi-fibre-digestive-biscuits.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1201304_1-britannia-nutri-choice-hi-fibre-digestive-biscuits.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1201975_1-oreo-creme-biscuits-vanilla-120g-choco-120g-strawberry-120g.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1201975_1-oreo-creme-biscuits-vanilla-120g-choco-120g-strawberry-120g.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1202645_2-sunfeast-dark-fantasy-choco-fills.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1202645_2-sunfeast-dark-fantasy-choco-fills.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1203908_1-britannia-good-day-cookies-rich-cashew.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1203908_1-britannia-good-day-cookies-rich-cashew.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/1203939_1-britannia-biscuits-milk-bikis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/1203939_1-britannia-biscuits-milk-bikis.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/40017577_1-lotte-choco-pie-premium-quality.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/40017577_1-lotte-choco-pie-premium-quality.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/401806_1-patanjali-doodh-biscuit.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/401806_1-patanjali-doodh-biscuit.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/model_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/model_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/02-product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/Model_Page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/Product2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/Product3.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/Product3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/Product_DV2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/bigbasket.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/product4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/product_context.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/product_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="d83f6816-c81f-4341-9a75-02bdb3daab50" name="Default Changelist" comment=";" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,128 +42,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/product/templates/product/product_list.html">
+        <entry file="file://$PROJECT_DIR$/order/templates/order/order_processing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="198">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#1183#1189#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/product/templates/product/product-detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-831">
-              <caret line="110" column="65" lean-forward="true" selection-start-line="110" selection-start-column="65" selection-end-line="110" selection-end-column="65" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#3;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#4;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#5;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#6;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#7;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#8;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h6#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/shop-block.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/navbar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#nav#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#nav#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#nav#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#nav#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#4;n#nav#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/sign-in_up-pop-up.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/base.html">
+        <entry file="file://$PROJECT_DIR$/order/templates/order/order_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            <state relative-caret-position="244">
+              <caret line="81" column="4" lean-forward="true" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/homepage.html">
+        <entry file="file://$PROJECT_DIR$/order/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="10">
+              <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -347,7 +230,30 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="user_basket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="" />
@@ -548,7 +454,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323040000" />
+    <option name="totallyTimeSpent" value="323586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -558,7 +464,7 @@
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.72624797" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4879227" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4879227" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49621785" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -641,10 +547,21 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/order/templates/order/order_processing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1401">
-          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="198">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -775,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/order/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="10">
+          <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
