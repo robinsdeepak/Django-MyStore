@@ -2,29 +2,31 @@
 			    <a class="navbar-brand" href="{% url 'homepage:homepage-index' %}" style="color:black;"><h3>MyStore</h3></a>
                 <div class="input-group md-form form-sm form-2 pl-0 mr-auto" style="width:600px;">
                       <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search.." aria-label="Search">
-                          <div class="input-group-append" >
-                                <span class="input-group-text red lighten-3" id="basic-text1"><i class="fa fa-search text-grey" aria-hidden="true" ></i></span>
-                          </div>
+                      <div class="input-group-append" >
+                            <span class="input-group-text red lighten-3" id="basic-text1">
+                                <i class="fa fa-search text-grey" aria-hidden="true" ></i>
+                            </span>
+                      </div>
                 </div>
             <a class="mr-auto"><i class="fa fa-android fa-3x "></i></a>
             <a class="mr-auto"><i class="fa fa-phone fa-2x"></i></a>
                 {% if not request.user.is_authenticated %}
-            <a class="navbar-brand" id="BUTTON" href="#" style="color:black;"><h3>Login</h3></a>
+                      <button class="btn btn-outline-secondary" type="button" id="BUTTON">Login</button>
                 {% else %}
-            <li class="dropdown dropleft">
-                <a class=" dropdown-toggle navbar-brand" data-toggle="dropdown" href="#" style="color:black;">Profile</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="{% url 'user:profile' %}">Account</a>
-					<a class="dropdown-item" href="{% url 'order:list' %}">Orders</a>
-                    <div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
-				</div>
-			</li>
+                    <li class="dropdown dropleft">
+                        <a class=" dropdown-toggle navbar-brand" data-toggle="dropdown" href="#" style="color:black;">Profile</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'user:profile' %}">Account</a>
+                            <a class="dropdown-item" href="{% url 'order:list' %}">Orders</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+                        </div>
+                    </li>
                 {% endif %}
           </nav>
           <nav class="navbar top navbar-light">
             <a href="#" class="mr-auto" style="color:black;"><i class="fa fa-map-marker"> Deliver to <br>Default Address</i></a>
-            <a id="Category_PAGEButton" class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Categories</h5></a>
+            <a id="Category_PAGEButton" class="navbar-brand mr-auto" style="color:black;"><h5>Categories</h5></a>
             <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Shop</h5></a>
             <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Offer</h5></a>
             <a class="navbar-brand mr-auto" href="#" style="color:black;"><h5>Instant Offer</h5></a>
