@@ -32,11 +32,9 @@
                 </div>
                 <div class="payment">
                 </div>
-
             </div>
-
             <div class="col-sm-4 location-on-map">
-                <img src="/media/map.jpg" alt="map" width="400px;" height="160">
+                <img src="/media/map.jpg" alt="map" width="400px;" height="160;">
             </div>
         </div>
     <div class="row order_summary" style="background-color: #c8c8c8;">
@@ -52,7 +50,6 @@
     </div>
 {% for product in products %}
         <div class="row product">
-{#            <div class="col-md-4 col-sm-12">#}
                 <div class="row a-box-shipment">
                             <div class="col-sm-2" style="padding-top: 10px;">
                                 <a href="{% url 'product:productView' product.pk %}" style="text-decoration: None;">
@@ -62,23 +59,20 @@
                             <div class="col-sm-6" style="padding-top: 10px;">
                                     <span style="color: #1b1e21;">
                                         <strong>
-                                            <a href="{% url 'product:productView' product.pk %}" style="text-decoration: None;">{{ product.name }}</a>
+                                            <a href="{% url 'product:productView' product.pk %}" style="text-decoration: None;">
+                                                {{ product.name }}
+                                            </a>
                                         </strong>
                                     </span><br>
                                     <span>Qty: 10{{ product_quantity }}</span>
                             </div>
-
                             <div class="col-sm-4" style="text-align: center; padding-top: 10px;">
                                 <span><strong>Price:</strong> Rs. {{ product.price }}x{{ product_quantity }}</span>
                             </div>
                 </div>
-{#            </div>#}
         </div>
     {% endfor %}
-
     </div>
-
-
     <style>
         .order-checkout{
 
@@ -122,5 +116,4 @@
             border-radius: 5px;
         }
     </style>
-
 {% endblock %}
