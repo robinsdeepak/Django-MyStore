@@ -1,92 +1,47 @@
 {% extends 'homepage/base.html' %}
-{% load static %}
-{% block title %}Basket{% endblock %}
 
 {% block body %}
 
-    <div class="container-fluid all_orders" style="padding-top: 10px; margin-top: 40px;">
-        {% for order in all_order %}
+    <div class="container product-list">
 
-        <div class="row justify-content-center" style="margin-bottom: 5px;">
-            <div class="col-sm-8" style="background-color: lightgrey; border-radius: 5px;">
-                <div class="a-row" style="border-bottom: solid lightgrey 0.5px">
-                    <div class="container-fluid" >
-                        <div class="row">
+        {% for product in all_products %}
 
-                            <div class="col-md-2">
-                                <strong>Order Placed</strong><br>
-                                <span>{{ order.date_ordered.date }}</span>
-                            </div>
-                            <div class="col-md-2">
-                                <strong>Shipped to</strong><br>
-                                <i class="fa fa-map-marker"></i> Patliputra
-                            </div>
-                            <div class="col-md-2">
-                                <strong>Total Amount</strong>
-                            <span>Rs. {{ order.total_amount }}</span>
-                            </div>
-                            <div class="col-md-4"></div>
-                            <div class="col-md-2" style="text-align: right">
-                                <strong>Order Number</strong>
-                                <span>#456798765</span>
-                            </div>
-
-                        </div>
-                    </div>
+            <div class="row product-detail">
+                <div class="col-md-3">
+                    <img src="#" alt="product-photo">
                 </div>
-
-            <!-- Status Bar -->
-            <div class="row" style="padding-top: 5px; background-color: #fff;">
-                <div class="col-sm-2">
-                    <span><strong>Delevery status</strong></span><br>
-                    <span>Delivered</span>
+                <div class="col-md-6">
+                    <strong><span><a href="">{{ product.name }}Product name.</a></span></strong><br>
+                    <strong>
+                        <small>Sold By: <a href="">Shop name</a></small>
+                    </strong><br>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                    <span>{% if product.quantity %} {{ product.quantity }}{% else %}1{% endif %}</span>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
                 </div>
-                <div class="col-sm-5">
-                    <span><strong>Bought From: </strong></span>
-                    <span style="color: #003eff;"><a href="{% url 'Shop:shop-detail' order.ordered_from_shop.pk %}" style="text-decoration: None;">{{ order.ordered_from_shop.title }}</a></span>
-                </div>
-                <div class="col-sm-2">
-                    <button class="btn btn-outline-info" style="height: 38px; width: 150px;"> Track</button>
-                </div>
-                <div class="col-sm-2" style="margin-left: 10px;">
-                    <button class="btn btn-outline-info" style="height: 38px; width: 150px;">Contact Support</button>
+                <div class="col-md-3" style="margin-top: 20px;">
+                    Rs.100.00 x 3 = Rs.300.00
                 </div>
             </div>
-            <!-- Shipments -->
-
-                {% for shipment_sets in order.user_order_products_set.all %}
-                    {% for shipment in shipment_sets.ordered_product.all %}
-                        <div class="row a-box-shipment" style="background-color: #fff; height: 120px; border-radius: 5px;">
-                            <div class="col-sm-2" style="padding-top: 10px;">
-                                <a href="{% url 'product:productView' shipment.pk %}" style="text-decoration: None;">
-                                    <img src="{{ shipment.image_link.url }}" alt="image" style=" height: 80px;">
-                                </a>
-                            </div>
-
-                            <div class="col-sm-6" style="padding-top: 10px;">
-                                    <span style="color: #1b1e21;"><strong>
-                                        <a href="{% url 'product:productView' shipment.id %}" style="text-decoration: None;">
-                                            {{ shipment.name }}
-                                        </a></strong></span><br>
-                                    <span>Qty: {{ shipment_sets.ordered_quantity }}</span>
-                            </div>
-
-                            <div class="col-sm-4" style="text-align: center; padding-top: 10px;">
-                                <span><strong>Price:</strong> Rs.{{ shipment_sets.product_price }}</span>
-                            </div>
-                        </div>
-
-                    {% endfor %}
-                {% endfor %}
-            </div>
-        </div>
 
         {% endfor %}
 
     </div>
+
     <style>
-    a{
-        text-decoration: None;
-    }
+        .product-detail {
+            background-color: #0be881;
+            border: solid 1px #09e83e;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .product-list {
+            min-height: 400px;
+        }
     </style>
+
 {% endblock %}
+
+

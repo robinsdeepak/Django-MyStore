@@ -54,6 +54,26 @@ class user_order_products(models.Model):
         return self.for_order.user.username + '\'s Products ordered from ' + self.for_order.ordered_from_shop.title
 
 
-# 1. need to find a dictionary like model for the user_order, as this is not the proper way.
-# 2. Here user_order can be used as abstract class for user_order_products >> will be better than now.
-# 3. 
+# 1. Need to find a dictionary like model for the user_order, as this is not the proper way.
+#       >> if not model manager can be used to return dictionary like object
+#       >> another option is to create a Model Field
+
+# 2. Here user_order can be used as abstract class for user_order_products
+#       >> will be better than now. (27.01.2019)
+#       >>
+#       >>
+
+# 3.
+
+
+
+
+
+
+
+
+
+
+
+
+

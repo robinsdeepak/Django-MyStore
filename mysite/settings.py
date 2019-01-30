@@ -94,7 +94,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+# psql -h mydbinstance.cownlmrvbiqt.ap-south-1.rds.amazonaws.com -U Deepak -d database1 -p 5432
 # sqlite3 database settings
 # DATABASES = {
 #     'default': {
