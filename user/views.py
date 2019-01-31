@@ -57,11 +57,13 @@ def Login(request):
                 if x == current_url[:y]:
                     return redirect(current_url[y:])
 
-                # if the user has logged in via pop-up
+                # if the user has logged in via pop-up.
+                # Single page application need to be use in this case.
+                # SPA will change the login button to profile dropdown without redirect.
                 elif reverse('login') != current_url[:len(reverse('login'))]:
                     return redirect(current_url)
 
-                # if the user has logged in via login page
+                # if the user has logged in via login page without a redirect url.
                 else:
                     return redirect('homepage:homepage-index')
             else:

@@ -7,16 +7,7 @@ from shop.models import Shop
 class BasketManager(models.Manager):
 
     def all_products(self):
-        basket_objects = self.objects.all()
-        products_list = [i.basket_product for i in basket_objects]
-
-        products = {
-                    'product_id': {
-                                    'date_added': '',
-                                    'quantity': '',
-                                    }}
-
-        return products_list
+        return 'anything'
 
 
 class basket(models.Model):
@@ -24,18 +15,30 @@ class basket(models.Model):
         verbose_name = 'User Basket'
         db_table = 'User_Basket'
 
-    # userprofile = models.ForeignKey(User, on_delete=models.CASCADE)
-    basket_product = models.ForeignKey(product_data, on_delete=models.CASCADE)
-    basket_product_shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
-
-    #number_of_items = models.IntegerField()
-    # new_field = models.CharField(max_length=10)
-
-    manager = BasketManager()
-
-    # def query_set(self):
-    #     return '30 products'
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "Basket"
-#
+        if self.user.first_name:
+            return self.user.first_name + "'s Basket"
+        else:
+            return self.user.username + "'s Basket"
+
+    @property
+    def total_amount(self):
+        return sum([(product_set.basket_product.price * product_set.quantity)
+                    for product_set in self.basket_product_set.all()])
+
+
+class basket_product(models.Model):
+
+    basket_obj = models.ForeignKey(basket, on_delete=models.CASCADE)
+    basket_product_shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    basket_product = models.ForeignKey(product_data, on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=1)
+
+    def __str__(self):
+        return 'Basket Items'
+
+
+
+

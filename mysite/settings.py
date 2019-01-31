@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'homepage',
     'saved_products',
     'users',
+    # Filters
 ]
 
 MIDDLEWARE = [

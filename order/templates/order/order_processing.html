@@ -21,6 +21,7 @@
                         <span class="pin-code">800013</span>
                         <span class="State">Bihar</span>
                     </div>
+
                     <div class="address-details">
                         <span class="recipient-name"><strong>Deepak Kumar</strong></span><br>
                         <span class="address-line-1">Sai Mandir Patliputra</span><br>
@@ -37,19 +38,82 @@
                 <img src="/media/map.jpg" alt="map" width="400px;" height="160;">
             </div>
         </div>
-    <div class="row order_summary" style="background-color: #c8c8c8;">
-{#                    <div class="row" style="padding-top: 5px; background-color: #fff;">#}
-                <div class="col-sm-5" style="text-align: center;">
-                    <span><strong>Sold By</strong></span><br>
-                    <span><a href="#" style="text-decoration: None;">Shop name</a></span>
-                </div>
-                <div class="col-sm-5" style="text-align: center;">
-                    <span><strong>Total amount: </strong></span><br>
-                    <span style="color: #003eff;">Rs.204.00</span>
-                </div>
-    </div>
-{% for product in products %}
+    {% if all_basket_product_sets %}
+        <div class="row order_summary justify-content-between" style="background-color: #c8c8c8; margin: 5px; padding: 5px;">
+            <div class="col-sm-5" style="padding: 10px;">
+                <span><strong>Total amount: </strong></span>
+                <span style="color: #003eff;">&#8377; {{ basket_obj.total_amount }}</span>
+            </div>
+            <div class="col-sm-5" style="text-align: right;">
+                <a href="{% url 'order:place-order' %}">
+                    <button class="btn btn-outline-primary">Place Order</button>
+                </a>
+            </div>
+        </div>
+
+
+    {% elif SingleCheckout %}
+        <div class="row order_summary justify-content-between" style="background-color: #c8c8c8; margin: 5px; padding: 5px;">
+            <div class="col-sm-5" style="padding: 10px;">
+                <span><strong>Total amount: </strong></span>
+                <span style="color: #003eff;">&#8377; {{ total_amount }}</span>
+            </div>
+            <div class="col-sm-5" style="text-align: right;">
+                <a href="{% url 'order:checkout' product.pk shop.pk %}">
+                    <button class="btn btn-outline-primary">Place Order</button>
+                </a>
+            </div>
+        </div>
+    {% endif %}
+{#  for CheckOut From Basket                 #}
+{% for product_set in all_basket_product_sets %}
         <div class="row product">
+                <div class="row a-box-shipment">
+                            <div class="col-sm-2" style="padding-top: 10px;">
+                                <a href="{% url 'product:productView' product_set.basket_product.pk %}" style="text-decoration: None;">
+                                <img src="{{ product_set.basket_product.image_link.url }}" alt="image" style=" height: 80px;"></a>
+                            </div>
+
+                            <div class="col-sm-6" style="padding-top: 10px;">
+                                    <span style="color: #1b1e21;">
+                                        <strong>
+                                            <a href="{% url 'product:productView' product_set.basket_product.pk %}" style="text-decoration: None;">
+                                                {{ product_set.basket_product.name }}
+                                            </a>
+                                        </strong>
+                                    </span><br>
+                                    <span>
+                                        <strong>Sold By: </strong>
+
+                    <span><a href="#" style="text-decoration: None;">{{ product_set.basket_product_shop.title }}</a></span>
+
+                                    </span>
+                            </div>
+                            <div class="col-sm-4" style="text-align: left; padding-top: 10px;">
+                                <span><strong>Qty: </strong>{{ product_set.quantity }}</span><br>
+                                <span>
+                                    <strong>Price:</strong>
+                                    &#8377; {{ product_set.basket_product.price }} x {{ product_set.quantity }}
+                                </span>
+                            </div>
+                </div>
+        </div>
+    {% endfor %}
+
+    <!-- ############################ -->
+    <!-- ############################ -->
+    <!-- ############################ -->
+    <!-- ############################ -->
+    <!-- ############################ -->
+    <!-- ############################ -->
+    <!-- ############################ -->
+    <!-- ############################ -->
+
+    {# For single CheckOut #}
+    {% if SingleCheckout %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row product">
                 <div class="row a-box-shipment">
                             <div class="col-sm-2" style="padding-top: 10px;">
                                 <a href="{% url 'product:productView' product.pk %}" style="text-decoration: None;">
@@ -64,15 +128,27 @@
                                             </a>
                                         </strong>
                                     </span><br>
-                                    <span>Qty: 10{{ product_quantity }}</span>
+                                    <span>
+                                        <strong>Sold By: </strong>
+
+                    <span><a href="#" style="text-decoration: None;">{{ shop.title }}</a></span>
+
+                                    </span>
                             </div>
-                            <div class="col-sm-4" style="text-align: center; padding-top: 10px;">
-                                <span><strong>Price:</strong> Rs. {{ product.price }}x{{ product_quantity }}</span>
+                            <div class="col-sm-4" style="text-align: left; padding-top: 10px;">
+                                <span><strong>Qty: </strong>{{ quantity }}</span><br>
+                                <span>
+                                    <strong>Price:</strong>
+                                    &nbsp;&nbsp;&#8377; {{ product.price }} x {{ quantity }}
+                                </span>
                             </div>
                 </div>
         </div>
-    {% endfor %}
+            </div>
+        </div>
+    {% endif %}
     </div>
+
     <style>
         .order-checkout{
 
@@ -117,3 +193,4 @@
         }
     </style>
 {% endblock %}
+

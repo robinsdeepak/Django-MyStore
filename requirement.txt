@@ -1,0 +1,4 @@
+django
+psycopg2
+psycopg2-binary
+django-mathfilters

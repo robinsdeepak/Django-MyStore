@@ -2,36 +2,58 @@
 
 {% block body %}
 
-    <div class="container product-list">
+{#    show below container only if there is any item in basket#}
 
-        {% for product in all_products %}
+    {% if basket_obj and all_product_sets %}
+        <div class="container product-list">
 
-            <div class="row product-detail">
-                <div class="col-md-3">
-                    <img src="#" alt="product-photo">
-                </div>
-                <div class="col-md-6">
-                    <strong><span><a href="">{{ product.name }}Product name.</a></span></strong><br>
-                    <strong>
-                        <small>Sold By: <a href="">Shop name</a></small>
-                    </strong><br>
-                    <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                    <span>{% if product.quantity %} {{ product.quantity }}{% else %}1{% endif %}</span>
-                    <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
-                </div>
-                <div class="col-md-3" style="margin-top: 20px;">
-                    Rs.100.00 x 3 = Rs.300.00
+            <div class="row justify-content-lg-start">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4"><strong>Basket Value: </strong>&#8377;{{ basket_obj.total_amount }}</div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2">
+                    <a href="{% url 'order:process-order' %}">
+                        <button class="btn btn-outline-primary btn-group-lg">Checkout Basket</button>
+                    </a>
                 </div>
             </div>
+            {% for product_set in all_product_sets %}
 
-        {% endfor %}
+                <div class="row product-detail">
+                    <div class="col-md-3">
+                        <img src="{{ product_set.basket_product.image_link.url }}" alt="product-photo" width="50px">
+                    </div>
+                    <div class="col-md-6">
+                        <strong><span><a href="">{{ product_set.basket_product.name }}Product name.</a></span></strong><br>
+                        <strong>
+                            <small>Sold By: <a href="">{{ product_set.basket_product_shop.title }}</a></small>
+                        </strong><br>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                        <span>{% if product.quantity %} {{ product.quantity }}{% else %}1{% endif %}</span>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                    </div>
+                    <div class="col-md-3" style="margin-top: 20px;">
+                        Rs.{{ product_set.basket_product.price }} x {{ product_set.quantity }}
+                    </div>
+                </div>
 
-    </div>
+            {% endfor %}
+
+        </div>
+    {% else %}
+        <div class="container" style="min-height: 80vh;">
+        <div class="row">
+            <div class="col-sm-12" style="background-color: #c8c8c8; padding: 10px; margin: 10px; text-align: center; border-radius: 5px;">
+                <strong>Your Basket is empty.<br>Add items and place your order.</strong>
+            </div>
+        </div>
+        </div>
+    {% endif %}
 
     <style>
         .product-detail {
-            background-color: #0be881;
-            border: solid 1px #09e83e;
+            background-color: #c8c8c8;
+            border: solid 1px #8c8c8c;
             border-radius: 10px;
             margin: 10px;
             padding: 10px;

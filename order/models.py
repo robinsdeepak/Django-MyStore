@@ -22,7 +22,6 @@ class user_order(models.Model):
 
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
         x = sum([(product.ordered_quantity * product.ordered_product.price) for product in self.user_order_products_set.all()])
-        print(x)
         self.total_amount = x
         super().save()
 
@@ -41,7 +40,7 @@ class user_order_products(models.Model):
     # shipping address will be imported from user model
     # shipping_address = models.ForeignKey(User_address, on_delete=models.CASCADE)
 
-    # ordered quantity will be show in user order history
+    # ordered quantity will be shown in user order history
     # and quantity_available will decrease from the shop
     ordered_quantity = models.IntegerField(default=1, choices=numbers)
     product_price = models.DecimalField(null=True, max_digits=9, decimal_places=2)
