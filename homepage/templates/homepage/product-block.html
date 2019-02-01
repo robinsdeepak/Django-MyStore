@@ -1,19 +1,19 @@
 {% load static %}
-    <a href="{% url 'product:productView' product.pk %}" style="text-decoration: none;">
+    <a href="#{# {% url 'product:productView' product.pk %} #}" style="text-decoration: none;">
         <b style="color: black;">{{ product.name }}</b><br>
         <img class="ProductImageNew" src="{{ product.image_link.url }}" alt=""><br>
     </a>
     <b class="PriceDetailsInTemplate"><small><del>MRP Rs. {{ product.price }}</del></small><br>Price Rs. {{ product.price }}</b><br>
     {% if product.pk > 500 %}
-        <a href="{% url 'order:process' product.pk 2 %}">
+        <a href="#{# {% url 'order:process' product.pk 2 %} #}">
             <img src="{% static 'homepage/Pics/checkout.png' %}" class="BuyNowButtonStyle" alt="Buy">
         </a>
-        <a href="{% url 'basket:add-item' product.pk 2%}"><i class="fas fa-cart-plus AddToCartButtonStyle"></i></a>
+        <a href="#{# {% url 'basket:add-item' product.pk 2%} #}"><i class="fas fa-cart-plus AddToCartButtonStyle"></i></a>
 
     {% else %}
 
-        <a href="{% url 'order:process' product.pk 3 %}">
+        <a href="#{# {% url 'order:process' product.pk 3 %} #}">
             <img src="{% static 'homepage/Pics/checkout.png' %}" class="BuyNowButtonStyle" alt="Buy">
         </a>
-        <a href="{% url 'basket:add-item' product.pk 3%}"><i class="fas fa-cart-plus AddToCartButtonStyle"></i></a>
+        <a href="#{# {% url 'basket:add-item' product.pk 3%} #}"><i class="fas fa-cart-plus AddToCartButtonStyle"></i></a>
     {% endif %}

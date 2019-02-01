@@ -8,5 +8,5 @@ urlpatterns = [
     path('', views.product_list, name='product-list'),
 
     # /product/<pk>/ # to be done later
-    path(r'<pk>/', views.productView, name='productView'),
+    path('<pk>/', views.productView, name='productView'),
 ]

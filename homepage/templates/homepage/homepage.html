@@ -5,7 +5,7 @@
     <div class="container-fluid" style="border-top: 1px solid black">
         <div class="SlidSHow">
             <div class="NewProduct ">
-                <b>Trending</b><br>
+                <b>Trending products</b><br>
                 {% for product in trending_products %}
                 <div class="NewTemplate mySlides">
                     {% include 'homepage/product-block.html' %}
@@ -18,7 +18,7 @@
 
         <div class="SlidSHow4">
             <div class="ShopList">
-                <b>shop near u</b><br>
+                <b>Shops in your locality</b><br>
               {% for shop in nearby_shops %}
                   {% include 'homepage/shop-block.html' %}
               {% endfor %}
@@ -29,7 +29,7 @@
 
         <div class="SlidSHow2">
             <div class="NewProduct">
-                <b >Nearby Products</b><br>
+                <b> Product from nearby shops</b><br>
                 {% for product in nearby_products %}
                     <div class="NewTemplate mySlides2">
                         {% include 'homepage/product-block.html' %}
@@ -273,13 +273,8 @@
 
        // end of code for slides one
 
-
-
-
-
-
-          //  script code for 4th slides
-          function myFunction4(c){
+       //  script code for 4th slides
+        function myFunction4(c){
         if (c.matches) {
         var slideIndex = 1;
          showSlides(slideIndex);
