@@ -1,6 +1,6 @@
 from django.db import models
 from .model_options import category_options, attributes
-
+import os
 
 class product_data(models.Model):
     class Meta:
@@ -15,6 +15,10 @@ class product_data(models.Model):
     product_info = models.CharField(max_length=100)
     rating = models.DecimalField(max_digits=4, decimal_places=2)    # an expression for rating
     price = models.DecimalField(max_digits=9, decimal_places=2)
+
+    @property
+    def large_image(self):
+        return self.image_link.url.replace('/media/', '/media/large/')
 
     def __str__(self):
         return self.name

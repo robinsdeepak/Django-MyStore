@@ -1,7 +1,9 @@
 # Django files
 static/
+trash/
+venvl/
 
-
+# ======== Auto Generated for Python ========
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *__pycache__/
@@ -91,7 +93,6 @@ celerybeat-schedule
 .venv
 env/
 venv/
-venvl/
 ENV/
 env.bak/
 venv.bak/

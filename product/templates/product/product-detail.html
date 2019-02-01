@@ -8,7 +8,7 @@
         <div class="LeftSideProductPage">
             <div style="display: flex;">
                 <div class="ProductImg" >
-                    <img src="{{ product.image_link.url }}" style="max-width:95%;max-height:400px;margin:2% ">
+                    <img src="{{ product.large_image }}" style="max-width:95%;max-height:400px;margin:2% ">
                 <a href="#" style="color:black;text-align:center;"><h6>Rate and Report</h6></a>
                 </div>
                 <div class="PINCheck">
@@ -104,7 +104,7 @@
     <div class="CodingOfProductPage4Mobile">
         <div class="FirstSectionOfProductPage4Mobile">
             <h5 style="padding-left: 2%">{{ product.name }} by <a href="#">nearby shop{{ nearby_shop }}</a></h5>
-            <img class="ProductImg4Mobile" src="{{ product.image_link.url }}">
+            <img class="ProductImg4Mobile" src="{{ product.large_image }}">
             <h6 class="RateAndReview4MobileInProductPage"><a style="color: black;" href="#">Rate and review</a></h6>
             <div class="ShortFeatures4MobileOfAProduct">
                 <h4>Features</h4>

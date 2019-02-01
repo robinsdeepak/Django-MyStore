@@ -5,6 +5,16 @@ from django.contrib.auth.decorators import login_required
 
 
 def UserSignUp(request):
+
+    if request.user.is_authenticated:
+        """
+            # If user is logged and if requested this url, write this event to log along with User's username and IP.
+            
+            # Redirect the user to homepage and send a message "Your are already registered and logged in."
+
+        """
+        return redirect('homepage:homepage-index')
+
     if request.method == 'POST':
         """
         Need to use django.form and cleaned_data
@@ -18,6 +28,10 @@ def UserSignUp(request):
 
         try:
             user = User.objects.get(username=username)
+            """
+            # return a page with message you are already registered
+            # provide two options 'Login' or 'Reset Password'
+            """
             return HttpResponse('You are already registered, Please login.')
         except User.DoesNotExist:
             # Send OTP and Verify Phone Number
@@ -29,7 +43,7 @@ def UserSignUp(request):
             return redirect('homepage:homepage-index')
 
     else:
-        return render(request, 'user/registration2.html', {})
+        return render(request, 'user/registration.html', {})
 
 
 def LogOut(request):
@@ -79,4 +93,7 @@ def Login(request):
 
 def UserProfileView(request):
     return render(request, 'user/user_profile.html')
+
+
+
 

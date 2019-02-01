@@ -1,12 +1,51 @@
 {% extends 'homepage/base.html' %}
 
-{% block title %}Login{% endblock %}
+{% block body %}
+    <div class="container" style="width: 50%;">
+        <div class="content-section">
+            <form method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="border-bottom">Join Today</legend>
+                    <div id="div_id_username" class="form-group">
+                        <label for="id_username" class="col-form-label requiredField">Phone</label>
+                        <div class="">
+                            <input type="text" name="username" maxlength="150" autofocus
+                                   class="textinput textInput form-control" required id="id_username">
+                        </div>
+                    </div>
+                    <div id="div_id_email" class="form-group">
+                        <label for="id_email" class="col-form-label  requiredField">Email</label>
+                        <div class="">
+                            <input type="email" name="email" class="emailinput form-control"
+                                   required id="id_email"> </div>
+                    </div>
+                    <div id="div_id_password1" class="form-group">
+                        <label for="id_password1" class="col-form-label  requiredField">Password </label>
+                        <div class="">
+                            <input type="password" name="password1" class="textinput textInput form-control" required id="id_password1">
+                        </div>
+                    </div>
+                    <div id="div_id_password2" class="form-group">
+                        <label for="id_password2" class="col-form-label  requiredField">Confirm Password</label>
+                        <div class="">
+                            <input type="password" name="password2" class="textinput textInput form-control" required id="id_password2">
+                            <small id="hint_id_password2" class="form-text text-muted">
+                                Enter the same password as before, for verification.
+                            </small>
+                        </div>
+                    </div>
+                </fieldset>
 
-{% block content %}
-  <h2>Login</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already registered? <a href="{% url 'login' %}">Login</a>
+                </small>
+            </div>
+        </div>
+    </div>
 {% endblock %}

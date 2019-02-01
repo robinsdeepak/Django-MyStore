@@ -1,1 +1,2 @@
 # user_basket object for a user will be created while creating the account and a row in table will also be created.
+# Static Files are kept in homepage/static/ # served for debug mode.

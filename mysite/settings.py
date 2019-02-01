@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'shop',
     'homepage',
     'saved_products',
-    'users',
+    # 'users',
     # Filters
 ]
 
@@ -70,66 +70,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'database1',
-#         'USER': 'postgres',
-#         'PASSWORD': '7264',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
 # AWS RDS DB
 DATABASES = {
-    'default': {
+    # 'default': {
+    'not_default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'database1',
         'USER': 'Deepak',
         'PASSWORD': '12345678',
         'HOST': 'mydbinstance.cownlmrvbiqt.ap-south-1.rds.amazonaws.com',
         'PORT': '5432',
+    },
+    'default': {
+    # 'not_default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'database1',
+        'USER': 'postgres',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-# psql -h mydbinstance.cownlmrvbiqt.ap-south-1.rds.amazonaws.com -U Deepak -d database1 -p 5432
-# sqlite3 database settings
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
-# # MySQL configuration from mysql website
-# DATABASES = {
-#     'default': {
-#         'NAME': 'database1',
-#         # 'ENGINE': 'mysql.connector.django',
-#         'ENGINE': 'django.db.backends.mysql',
-#         'USER': 'root',
-#         'PASSWORD': '7264',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#         # 'OPTIONS': {
-#         #   'autocommit': True,
-#         # },
-#     }
-# }
-
-# MySQL configuration from django
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'OPTIONS': {
-#             'read_default_file': 'my.cnf',
-#         },
-#     }
-# }
 
 
 # Password validation
@@ -167,3 +128,12 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'homepage:homepage-index'
+
+
+
+
+
+
+
+
+

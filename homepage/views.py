@@ -5,24 +5,12 @@ from order import models as order_models
 
 
 def index(request):
-    # user = request.user
-    context = {}
-    # if user.is_authenticated:
-    #
-    #     # getting product history.
-    #
-    #     all_ordered_products = []
-    #     all_orders = order_models.user_order.objects.all()
-    #     for order in all_orders:
-    #         all_ordered_products = all_ordered_products + list(order.user_order_products_set.all())
-    #
-    #     context['history_product'] = all_ordered_products
-
-    context['trending_products'] = [product for product in product_models.product_data.objects.all()[:50]],
-    context['nearby_shops'] = [shop for shop in shop_models.Shop.objects.all()[:20]],
-    context['nearby_products'] = [product for product in product_models.product_data.objects.all()[200:250]],
-    context['history_product'] = [product for product in product_models.product_data.objects.all()[300:350]],
-
+    context = {
+            'trending_products': [product for product in order_models.product_data.objects.all()[:50]],
+            'nearby_shops': [shop for shop in shop_models.Shop.objects.all()[:20]],
+            'nearby_products': [product for product in order_models.product_data.objects.all()[200:250]],
+            'history_product': [product for product in order_models.product_data.objects.all()[250:300]],
+        }
     return render(request, 'homepage/homepage.html', context)
 
 
@@ -31,9 +19,6 @@ def SerarchResultView(request):
     if request.method == "POST":
         search_text = request.POST['search']
     return HttpResponse('Search Result')
-
-
-
 
 
 
