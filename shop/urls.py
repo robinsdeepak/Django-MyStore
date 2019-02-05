@@ -17,3 +17,4 @@ urlpatterns = [
 
     # path('something/', views.AddNewShop.as_view(), name="something")
 ]
+

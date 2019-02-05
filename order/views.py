@@ -80,7 +80,8 @@ def CheckoutBasketView(request):
     CheckoutBasketView checkout all the product in basket.
     It groups the product according to shop.
     There is a different order for every shop.
-    Constraint should be applied for max number os shop for checkout.
+    Constraint should be applied for max number of shop per checkout.
+
     :param request:
     :return:
 
@@ -132,7 +133,8 @@ def CheckoutBasketView(request):
         order.save()
     # After the order has been placed successfully
     # Delete the products from basket
-    # Missing -- Check before deleting.
+    # Missing -- Check if the order was successful or not before deleting.
+
     for product_set in all_basket_product_sets:
         product_set.delete()
 
@@ -165,6 +167,9 @@ def CheckOutView(request, product_id, shop_id):
     order.save()
 
     return render(request, 'order/order-successful.html')
+
+
+
 
 
 

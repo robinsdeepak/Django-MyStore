@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'shop',
     'homepage',
     'saved_products',
+    'googlemap',
     # 'users',
     # Filters
 ]
@@ -128,7 +129,6 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'homepage:homepage-index'
-
 
 
 
