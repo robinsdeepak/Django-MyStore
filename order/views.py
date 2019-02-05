@@ -1,5 +1,4 @@
 from django.shortcuts import render, HttpResponse, reverse
-from django.http import JsonResponse
 from order import models as user_models
 from product import models as product_models
 from django.contrib.auth.decorators import login_required
@@ -163,10 +162,11 @@ def CheckOutView(request, product_id, shop_id):
         )
 
     user_order_product_set.save()
-
     order.save()
-
     return render(request, 'order/order-successful.html')
+
+
+
 
 
 
