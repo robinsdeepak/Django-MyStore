@@ -4,7 +4,6 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from shop.models import Shop
 
 
-
 def ShopListView(request):
     # Need to show the nearest shop using ML
     shops = Shop.objects.all()[:50]
@@ -81,8 +80,6 @@ def ShopDetailContextView(request, pk):
                    'products': shop.product_set.all()})
 
 
-
-
 def ShopAddReview(request, pk):
 
     if request.method == 'GET':
@@ -95,3 +92,38 @@ def ShopAddReview(request, pk):
         comment = request.POST['comment']
         shop.add_review(rating, comment)
         return HttpResponse('Rating Saved')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

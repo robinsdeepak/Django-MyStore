@@ -7,3 +7,4 @@ def SetLocationView(request):
 
 def Tracking(request):
     return HttpResponse('We are working on this function now')
+

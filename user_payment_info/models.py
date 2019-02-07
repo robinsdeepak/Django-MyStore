@@ -1,9 +1,9 @@
 from django.db import models
-from user.models import UserProfile
+from django.contrib.auth.models import User
 
 
 class Payment_Detail(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class DebitCard(models.Model):

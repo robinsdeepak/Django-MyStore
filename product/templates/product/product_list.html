@@ -4,7 +4,8 @@
     <div class="container" style="margin-top: 10px; align-items: center;">
         {% if error_message %}
             <div class="row justify-content-around">
-                <div class="col-sm-8" style="background-color: #c8c8c8; border-radius: 5px; padding: 5px; margin: 5px; text-align: center; min-height: 40px;">
+                <div class="col-sm-8"
+                     style="background-color: #c8c8c8; border-radius: 5px; padding: 5px; margin: 5px; text-align: center; min-height: 40px;">
                     <span>
                         <strong>{{ error_message }}</strong>
                     </span>
@@ -14,19 +15,38 @@
 
         {% for product in products %}
 
-            <div class="product" style=" width:200px; height: 320px; border: 0.1px solid grey; padding: 2px;background-color: #fff; float: left; margin: 5px;">
+            <div class="product"
+                 style=" width:200px; height: 320px; border: 0.1px solid grey; padding: 2px;background-color: #fff; float: left; margin: 5px;">
                 <a href="{% url 'product:productView' product.pk %}" style=" text-decoration: none;">
                     <h6 style="text-align: center;">
                         {{ product.name }}
-                        <img src="{{ product.image_link.url }}" alt="thumbnail" width="150px" ><br>
+                        <img src="{{ product.image_link.url }}" alt="thumbnail" width="150px"><br>
                     </h6>
                 </a>
-                <b class="PriceDetailsInTemplate"><small><del>MRP Rs. {{ product.price }}</del></small>
+                <b class="PriceDetailsInTemplate">
+                    <small>
+                        <del>MRP Rs. {{ product.price }}</del>
+                    </small>
                     <br>Price Rs. {{ product.price }}
                 </b><br>
 
-                <a href="#" style="alignment: bottom;"><img src="{% static 'homepage/Pics/checkout.png' %}" class="BuyNowButtonStyle" alt="Buy"></a>
-                <a href="#"><i class="fas fa-cart-plus AddToCartButtonStyle"></i></a>
+
+                {% if product.pk > 200 %}
+                    <a href="{% url 'order:process' product.pk 2 %}">
+                        <img src="{% static 'homepage/Pics/checkout.png' %}" class="BuyNowButtonStyle" alt="Buy">
+                    </a>
+                    <a href="{% url 'basket:add-item' product.pk 2 %}"><i
+                            class="fas fa-cart-plus AddToCartButtonStyle"></i></a>
+
+                {% else %}
+
+                    <a href="{% url 'order:process' product.pk 3 %}">
+                        <img src="{% static 'homepage/Pics/checkout.png' %}" class="BuyNowButtonStyle" alt="Buy">
+                    </a>
+                    <a href="{% url 'basket:add-item' product.pk 3 %}"><i
+                            class="fas fa-cart-plus AddToCartButtonStyle"></i></a>
+                {% endif %}
+
             </div>&nbsp;
         {% endfor %}
     </div>

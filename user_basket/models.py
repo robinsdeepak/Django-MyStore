@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from product.models import product_data
 from shop.models import Shop
+from django.utils import timezone
 
 
 class BasketManager(models.Manager):
@@ -30,15 +31,11 @@ class basket(models.Model):
 
 
 class basket_product(models.Model):
-
     basket_obj = models.ForeignKey(basket, on_delete=models.CASCADE)
     basket_product_shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    date_added = models.DateTimeField(default=timezone.now)
     basket_product = models.ForeignKey(product_data, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
 
     def __str__(self):
-        return 'Basket Items'
-
-
-
-
+        return str(self.quantity) + ' : ' + str(self.basket_product.name)

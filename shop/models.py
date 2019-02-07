@@ -1,5 +1,5 @@
 from django.db import models
-from user.models import UserProfile
+from django.contrib.auth.models import User
 from product.models import product_data
 from .model_options import states
 from django.urls import reverse
@@ -54,7 +54,7 @@ class product(models.Model):
 class review(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
     # review can be added in only if user is logged in, and after shopping from the Shop.
-    # user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.DecimalField(default=0, max_digits=3, decimal_places=1)      # max_value = 5
     comment = models.CharField(max_length=300, null=True)
 

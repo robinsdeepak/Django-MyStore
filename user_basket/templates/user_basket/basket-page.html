@@ -2,7 +2,7 @@
 
 {% block body %}
 
-{#    show below container only if there is any item in basket#}
+    {#    show below container only if there is any item in basket#}
 
     {% if basket_obj and all_product_sets %}
         <div class="container product-list">
@@ -21,19 +21,48 @@
 
                 <div class="row product-detail">
                     <div class="col-md-3">
-                        <img src="{{ product_set.basket_product.image_link.url }}" alt="product-photo" width="50px">
+                        <img src="{{ product_set.basket_product.image_link.url }}" alt="product-photo" height="80px">
                     </div>
                     <div class="col-md-6">
-                        <strong><span><a href="">{{ product_set.basket_product.name }}Product name.</a></span></strong><br>
                         <strong>
-                            <small>Sold By: <a href="">{{ product_set.basket_product_shop.title }}</a></small>
+                            <span>
+                                <a href="{% url 'product:productView' product_set.basket_product.pk %}">
+                                    {{ product_set.basket_product.name }}
+                                </a>
+                            </span>
+                        </strong>
+                        <br>
+                        <strong>
+                            <small>Sold By:
+                                <a href="{% url 'Shop:shop-detail' product_set.basket_product_shop.pk %}">
+                                    {{ product_set.basket_product_shop.title }}
+                                </a>
+                            </small>
                         </strong><br>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                        <span>{% if product.quantity %} {{ product.quantity }}{% else %}1{% endif %}</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
+
+                        <form action="{% url 'basket:update' product_set.pk %}" method="get"
+                              style="display: inline-block;">
+                            {% csrf_token %}
+                            <input type="hidden" value="-1" name="increase_by">
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">-</button>
+                        </form>
+
+                        <span style="display: inline-block;">{{ product_set.quantity }}</span>
+
+                        <form action="{% url 'basket:update' product_set.pk %}" method="get"
+                              style="display: inline-block;">
+                            {% csrf_token %}
+                            <input type="hidden" value="+1" name="increase_by">
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">+</button>
+                        </form>
                     </div>
                     <div class="col-md-3" style="margin-top: 20px;">
-                        Rs.{{ product_set.basket_product.price }} x {{ product_set.quantity }}
+                        Rs.{{ product_set.basket_product.price }} x {{ product_set.quantity }} <br><br>
+                        <form action="{% url 'basket:update' product_set.pk %}" method="get">
+                            {% csrf_token %}
+                            <input type="hidden" value="remove" name="increase_by">
+                            <button class="btn btn-outline-secondary btn-sm">Remove</button>
+                        </form>
                     </div>
                 </div>
 
@@ -42,11 +71,12 @@
         </div>
     {% else %}
         <div class="container" style="min-height: 80vh;">
-        <div class="row">
-            <div class="col-sm-12" style="background-color: #c8c8c8; padding: 10px; margin: 10px; text-align: center; border-radius: 5px;">
-                <strong>Your Basket is empty.<br>Add items and place your order.</strong>
+            <div class="row">
+                <div class="col-sm-12"
+                     style="background-color: #c8c8c8; padding: 10px; margin: 10px; text-align: center; border-radius: 5px;">
+                    <strong>Your Basket is empty.<br>Add items and place your order.</strong>
+                </div>
             </div>
-        </div>
         </div>
     {% endif %}
 
@@ -65,5 +95,7 @@
     </style>
 
 {% endblock %}
+
+
 
 

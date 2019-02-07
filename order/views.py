@@ -23,22 +23,21 @@ def BasketCheckOutProcess(request):
     all_basket_product_sets = basket_obj.basket_product_set.all()
 
     return render(request, 'order/order_processing.html', {
-            'all_basket_product_sets': all_basket_product_sets,
-            'basket_obj': basket_obj,
-        })
+        'all_basket_product_sets': all_basket_product_sets,
+        'basket_obj': basket_obj,
+    })
 
 
 @login_required
 def OrderProcessing(request, product_id, shop_id):
     """
     OrderProcessing takes the user to a page to confirm the items and make payment.
-
     :param request:
     :param product_id:
     :param shop_id:
     :return:
     """
-    user =request.user
+    user = request.user
     product = product_models.product_data.objects.get(pk=product_id)
     shop = shop_models.Shop.objects.get(pk=shop_id)
 
@@ -51,17 +50,16 @@ def OrderProcessing(request, product_id, shop_id):
     quantity = 1
 
     return render(request, 'order/order_processing.html', {
-                                    'SingleCheckout': True,
-                                    'shop': shop,
-                                    'product': product,
-                                    'quantity': quantity,
-                                    'total_amount': product.price*quantity,
-                                })
+        'SingleCheckout': True,
+        'shop': shop,
+        'product': product,
+        'quantity': quantity,
+        'total_amount': product.price * quantity,
+    })
 
 
 @login_required
 def OrderDetailView(request):
-
     # get order id
     # get products and quantity
     # pass product list in context
@@ -159,21 +157,8 @@ def CheckOutView(request, product_id, shop_id):
 
     user_order_product_set = user_models.user_order_products.objects.create(
         for_order=order, ordered_product=product, ordered_quantity=1
-        )
+    )
 
     user_order_product_set.save()
     order.save()
     return render(request, 'order/order-successful.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
