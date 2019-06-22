@@ -68,24 +68,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-# AWS RDS DB
 DATABASES = {
-    # 'default': {
-    'not_default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'database1',
-        'USER': 'Deepak',
-        'PASSWORD': '12345678',
-        'HOST': 'mydbinstance.cownlmrvbiqt.ap-south-1.rds.amazonaws.com',
-        'PORT': '5432',
-    },
     'default': {
-        # 'not_default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'database1',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': '127.0.0.1',
+        'NAME': os.environ['MYSTORE_PSQL_DATABASE_NAME'],
+        'USER': os.environ['MYSTORE_PSQL_DATABASE_USER'],
+        'PASSWORD': os.environ['MYSTORE_PSQL_DATABASE_PASSWD'],
+        'HOST': os.environ['MYSTORE_PSQL_DATABASE_HOST'],
         'PORT': '5432',
     }
 }
